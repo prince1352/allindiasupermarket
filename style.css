@@ -102,12 +102,13 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px; /* match header height */
-  background: linear-gradient(to bottom, var(--sand) 60%, transparent);
-  z-index: 500; /* BELOW header (z-index: 1000), ABOVE slides (z-index: 0) */
-  pointer-events: none; /* lets clicks pass through */
+  height: 120px; /* match or exceed header height */
+  background-color: transparent; /* fully transparent */
+  backdrop-filter: blur(20px); /* heavy blur */
+  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  z-index: 500;
+  pointer-events: none;
 }
-
 
 /* --------------------------------
         Swiper section 
