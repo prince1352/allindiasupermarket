@@ -144,6 +144,14 @@ html, body {
   text-align: center;
 }
 
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* required for vertical centering */
+}
+
 .landing-content h1 {
   font-size: 3.5rem;
   color: var(--green);
