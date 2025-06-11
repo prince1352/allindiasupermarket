@@ -91,48 +91,74 @@ body {
 }
 
 /* --------------------------------
-        Landing section 
+        Swiper section 
 ----------------------------------*/
 
-.landing-section {
+.swiper-container {
   height: 100vh;
-  background: linear-gradient(to bottom right, var(--sand), #ffffff);
+  width: 100%;
+}
+
+.swiper-slide {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+}
+
+/* --------------------------------
+        Landing section 
+----------------------------------*/
+
+.landing-slide {
+  background: linear-gradient(to bottom right, var(--sand), #ffffff);
   text-align: center;
+  padding: 40px;
 }
 
-.landing-section h1 {
-  font-size: 3rem;
+.landing-content h1 {
+  font-size: 3.5rem;
   color: var(--green);
-  animation: fadeInUp 1s ease-out;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.landing-content p {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 30px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
+.landing-button {
+  padding: 14px 32px;
+  background-color: var(--green);
+  color: var(--sand);
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
 
-  .logo img {
-    height: 48px;
-  }
+.landing-button:hover {
+  background-color: #0f322b;
+}
 
-  .nav-underline {
-    display: none;
-  }
+/* Product Slide */
+.product-slide {
+  background-color: #f8f8f5;
+  text-align: center;
+  padding: 40px;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  font-size: 1.2rem;
+  color: #333;
 }
