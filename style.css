@@ -46,14 +46,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px; /* consistent spacing from logo to navs */
+  gap: 120px; /* consistent spacing from logo to navs */
   position: relative;
 }
 
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 40px;
+  gap: 120px;
   list-style: none;
 }
 
@@ -61,9 +61,10 @@ body {
 .nav-right li a {
   text-decoration: none;
   color: var(--green);
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 1px;
   transition: color var(--transition-speed);
+  font-size: 1.1rem;
 }
 
 .main-header.scrolled .nav-left li a,
@@ -89,7 +90,10 @@ body {
   opacity: 0.2;
 }
 
-/* Landing section placeholder */
+/* --------------------------------
+        Landing section 
+----------------------------------*/
+
 .landing-section {
   height: 100vh;
   background: linear-gradient(to bottom right, var(--sand), #ffffff);
