@@ -91,6 +91,18 @@ body {
   opacity: 0.2;
 }
 
+.header-underlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* match header height */
+  background: linear-gradient(to bottom, var(--sand) 60%, transparent);
+  z-index: 500; /* BELOW header (z-index: 1000), ABOVE slides (z-index: 0) */
+  pointer-events: none; /* lets clicks pass through */
+}
+
+
 /* --------------------------------
         Swiper section 
 ----------------------------------*/
