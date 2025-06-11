@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <header class="main-header" id="mainHeader">
+    <nav class="nav-container">
+      <ul class="nav-left">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#customers">Customers</a></li>
+      </ul>
+
+      <div class="logo">
+        <picture>
+          <source srcset="logo.webp" type="image/webp">
+          <img src="logo.png" alt="Logo">
+        </picture>
+      </div>
+
+      <ul class="nav-right">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <section class="landing-section" data-aos="fade">
+    <h1>All India Superstore</h1>
+  </section>
+
+  <script>
+    AOS.init();
+
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
 
