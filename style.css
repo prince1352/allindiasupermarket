@@ -133,10 +133,7 @@ html, body {
 .landing-slide {
   background: linear-gradient(to bottom right, var(--sand), #ffffff);
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 40px;
+  padding: 0 40px; /* horizontal padding only */
 }
 
 .landing-content h1 {
