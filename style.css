@@ -128,7 +128,7 @@ body {
 .landing-content p {
   font-size: 1.25rem;
   color: var(--coral);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .landing-button {
@@ -144,8 +144,8 @@ body {
 
 .landing-button:hover {
   background-color: transparent;
-  color: var(--green);
-  border: 2px solid var(--green);
+  color: var(--coral);
+  border: 2px solid var(--coral);
 }
 
 /* Product Slide */
