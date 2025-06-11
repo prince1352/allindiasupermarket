@@ -26,9 +26,8 @@ body {
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 20px 60px;
-  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
   background-color: transparent;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .main-header.scrolled {
@@ -36,10 +35,19 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  gap: 60px; /* consistent spacing from logo to navs */
+  position: relative;
 }
 
 .nav-left,
@@ -52,8 +60,9 @@ body {
 .nav-left li a,
 .nav-right li a {
   text-decoration: none;
-  font-weight: 500;
   color: var(--green);
+  font-weight: 500;
+  letter-spacing: 1px;
   transition: color var(--transition-speed);
 }
 
@@ -71,15 +80,24 @@ body {
   transform: scale(1.05);
 }
 
-/* LANDING SECTION (placeholder) */
+/* Underline from edge of first nav item to last */
+.nav-underline {
+  margin-top: 12px;
+  height: 1px;
+  width: calc(100% - 120px); /* leave margin on sides */
+  background-color: var(--green);
+  opacity: 0.2;
+}
+
+/* Landing section placeholder */
 .landing-section {
   height: 100vh;
   background: linear-gradient(to bottom right, var(--sand), #ffffff);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 0 20px;
+  text-align: center;
 }
 
 .landing-section h1 {
@@ -99,19 +117,18 @@ body {
   }
 }
 
-/* MEDIA QUERIES */
+/* Responsive */
 @media (max-width: 768px) {
   .nav-left,
   .nav-right {
     display: none;
   }
 
-  .main-header {
-    padding: 16px 30px;
-  }
-
   .logo img {
     height: 48px;
   }
-}
 
+  .nav-underline {
+    display: none;
+  }
+}
