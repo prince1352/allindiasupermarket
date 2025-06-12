@@ -228,6 +228,10 @@ html, body {
 .product-slide {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .product-scroll-wrapper {
@@ -237,13 +241,13 @@ html, body {
 }
 
 .product-section {
-    padding: 120px 10% 60px;
-    background-color: var(--sand);
-    text-align: center;
-    z-index: 2;
-    position: relative;
-  }
-
+  padding: 120px 10% 60px;
+  background-color: var(--sand);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  min-height: 100%; /* ← key fix */
+}
   .product-header {
     margin-bottom: 40px;
   }
