@@ -150,10 +150,13 @@
       productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
     })
     .finally(() => {
-      loader.style.display = 'none';
-      swiper.update();     // Recalculate Swiper layout
-      AOS.refresh();       // Trigger AOS visibility recalculation
-    });
+  loader.style.display = 'none';
+  const activeIndex = swiper.activeIndex;
+  swiper.update();
+  swiper.slideTo(activeIndex, 0); // prevent scroll jump
+  AOS.refresh();
+});
+
 </script>
 
 
