@@ -156,9 +156,24 @@
   const activeIndex = swiper.activeIndex;
   swiper.update();
   swiper.slideTo(activeIndex, 0); // prevent scroll jump
-  AOS.refresh();
+  AOS.refresh();      
 });
 
+  // Prevent Swiper from hijacking scroll when inside .product-scroll-wrapper
+const scrollWrapper = document.querySelector('.product-scroll-wrapper');
+
+scrollWrapper.addEventListener('wheel', function (e) {
+  const delta = e.deltaY;
+  const atTop = this.scrollTop === 0;
+  const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
+
+  if ((delta < 0 && atTop) || (delta > 0 && atBottom)) {
+    // Let Swiper handle scroll
+  } else {
+    e.stopPropagation(); // Stop Swiper from interfering
+  }
+});
+  
 </script>
 
 
