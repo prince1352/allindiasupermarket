@@ -230,6 +230,10 @@ html, body {
   z-index: 2;
 }
 
+.product-section[data-aos] {
+  will-change: transform, opacity;
+}
+
 .product-section {
     padding: 120px 10% 60px;
     background-color: var(--coral);
