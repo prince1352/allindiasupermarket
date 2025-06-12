@@ -225,15 +225,8 @@ html, body {
 ----------------------------------*/
 
 .product-slide {
-  background: linear-gradient(to bottom right, var(--sand), #ffffff);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  padding: 0 40px;
-  text-align: center;
-  overflow: hidden;
+  z-index: 2;
 }
 
 .product-section {
