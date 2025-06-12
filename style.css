@@ -183,7 +183,62 @@ html, body {
   border: 2px solid var(--coral);
 }
 
-/* Product Slide */
+.brand-showcase {
+  margin-top: 60px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.brand-label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--green);
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.brand-logos picture {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logos picture img {
+  height: 50px;
+  max-width: 100px;
+  width: 100%;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logos picture img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* --------------------------------
+        Product Slide 
+----------------------------------*/
+
 .product-slide {
   background-color: #f8f8f5;
   text-align: center;
@@ -199,49 +254,4 @@ html, body {
 .section-content p {
   font-size: 1.2rem;
   color: #333;
-}
-
-.brand-showcase {
-  margin-top: 60px;
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.brand-label {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: var(--green);
-  margin-bottom: 24px;
-  letter-spacing: 1px;
-}
-
-.brand-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-}
-
-.brand-logos picture {
-  flex: 0 1 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brand-logos picture img {
-  height: 50px;
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  max-width: 100%;
-}
-
-.brand-logos picture img:hover {
-  transform: scale(1.1);
-  opacity: 1;
 }
