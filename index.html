@@ -122,13 +122,16 @@
     }
   });
 
-  // Force AOS refresh when product slide becomes active
-  swiper.on('slideChangeTransitionEnd', () => {
-    const currentSlide = swiper.slides[swiper.activeIndex];
-    if (currentSlide.id === 'products') {
-      AOS.refreshHard(); // Force animations to trigger inside Swiper
-    }
-  });
+swiper.on('slideChangeTransitionEnd', () => {
+  const currentSlide = swiper.slides[swiper.activeIndex];
+
+  if (currentSlide.id === 'products') {
+    const scrollWrapper = currentSlide.querySelector('.product-scroll-wrapper');
+    if (scrollWrapper) scrollWrapper.scrollTop = 0;
+
+    AOS.refreshHard(); // Re-trigger AOS animations
+  }
+});
 
   // Load Featured Products
   const productGrid = document.querySelector('.product-grid');
