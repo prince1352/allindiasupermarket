@@ -474,7 +474,7 @@ html, body {
 
 /* Brand Logo Bar */
 .product-brand-strip {
-  background-color: #f8f8f5;
+  background-color: var(--sand);
   padding: 20px 2%;
   display: flex;
   justify-content: space-between;
