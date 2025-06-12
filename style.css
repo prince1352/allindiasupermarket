@@ -334,7 +334,7 @@ html, body {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 240px 8% 80px;
+  padding: 120px 8% 80px;
   color: #fff;
   overflow: hidden;
   width: 100%;
