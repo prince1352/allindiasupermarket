@@ -124,12 +124,8 @@
 
 swiper.on('slideChangeTransitionEnd', () => {
   const currentSlide = swiper.slides[swiper.activeIndex];
-
   if (currentSlide.id === 'products') {
-    const scrollWrapper = currentSlide.querySelector('.product-scroll-wrapper');
-    if (scrollWrapper) scrollWrapper.scrollTop = 0;
-
-    AOS.refreshHard(); // Re-trigger AOS animations
+    AOS.refreshHard(); // Force animations to trigger inside Swiper
   }
 });
 
