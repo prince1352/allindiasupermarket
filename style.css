@@ -481,7 +481,7 @@ html, body {
   align-items: center;
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--green);
   gap: 60px;
   width: 100%;
   margin-left: auto;
