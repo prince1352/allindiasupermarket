@@ -236,18 +236,21 @@ html, body {
 
   .product-header {
     margin-bottom: 40px;
+    z-index: 99;
   }
 
   .product-title {
     font-size: 3rem;
     font-weight: 600;
     color: var(--green);
+    z-index: 99;
   }
 
   .product-subtitle {
     font-size: 1.25rem;
     color: #555;
     margin-top: 10px;
+    z-index: 99;
   }
 
   .product-grid {
@@ -256,6 +259,7 @@ html, body {
     gap: 40px;
     justify-content: center;
     padding: 20px 0;
+    z-index: 99;
   }
 
   .product-card {
@@ -284,6 +288,7 @@ html, body {
 
   .product-footer {
     margin-top: 40px;
+    z-index: 99;
   }
 
   .product-more-button {
@@ -295,6 +300,7 @@ html, body {
     border-radius: 6px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    z-index: 99;
   }
 
   .product-more-button:hover {
@@ -308,6 +314,7 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 200px;
+  z-index: 98;
 }
 
 .spinner {
@@ -317,6 +324,7 @@ html, body {
   border-top-color: var(--coral);
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  z-index: 98;
 }
 
 @keyframes spin {
