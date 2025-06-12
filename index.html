@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALL INDIA SUPERMARKET | Edmonton, Alberta</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
@@ -37,96 +36,72 @@
 
   <div class="header-underlay"></div>
 
+  <!-- Landing Section -->
+  <section class="landing-slide">
+    <div class="landing-background">
+      <picture>
+        <source srcset="images/landing-background.webp" type="image/webp">
+        <img src="images/landing-background.png" alt="Landing Background" />
+      </picture>
+    </div>
 
-<!-- Swiper Container for Full Page Slides -->
-  <div class="swiper swiper-container">
-    <div class="swiper-wrapper">
-
-      <!-- Slide 1: Landing Page -->
-     <div class="swiper-slide landing-slide">
-
-       <div class="landing-background">
-         <picture>
-           <source srcset="images/landing-background.webp" type="image/webp">
-           <img src="images/landing-background.png" alt="Landing Background" />
-         </picture>
-       </div>
-       
- <div class="landing-content">
-  <div class="landing-content-wrapper" data-aos="fade-up">
-    <h1>ALL INDIA SUPERMARKET</h1>
-    <p>Fresh, Authentic, and Local Groceries in Edmonton</p>
-    <a href="#products" class="landing-button">Browse Products</a>
-  </div>
-</div>
-       
-</div>
-
-      
-      <!-- Slide 2: Featured Products -->
-  <div class="swiper-slide product-slide" id="products">
-  <div class="product-scroll-wrapper">
-    <div class="product-section">
-      <div class="product-header" data-aos="fade-down">
-        <h2 class="product-title">Featured Products</h2>
-        <p class="product-subtitle">A curated selection of our most popular and seasonal grocery items</p>
+    <div class="landing-content">
+      <div class="landing-content-wrapper" data-aos="fade-up">
+        <h1>ALL INDIA SUPERMARKET</h1>
+        <p>Fresh, Authentic, and Local Groceries in Edmonton</p>
+        <a href="#products" class="landing-button">Browse Products</a>
       </div>
+    </div>
+  </section>
 
-      <div class="product-loading" id="productLoading">
-        <div class="spinner"></div>
+  <!-- Featured Products Section -->
+  <section class="product-slide" id="products">
+    <div class="product-scroll-wrapper">
+      <div class="product-section">
+        <div class="product-header" data-aos="fade-down">
+          <h2 class="product-title">Featured Products</h2>
+          <p class="product-subtitle">A curated selection of our most popular and seasonal grocery items</p>
+        </div>
+
+        <div class="product-loading" id="productLoading">
+          <div class="spinner"></div>
+        </div>
+
+        <div class="product-grid" id="productGrid" data-aos="fade-up">
+          <!-- Products will be injected here by JavaScript -->
+        </div>
+
+        <div class="product-footer" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="product-more-button">View All Products</a>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="product-grid" id="productGrid" data-aos="fade-up">
-        <!-- Products will be injected here by JavaScript -->
-      </div>
+  <!-- Product Categories Section -->
+  <section class="product-categories-slide" id="categories">
+    <div class="categories-scroll-wrapper">
+      <section class="product-categories-section">
+        <div class="product-categories-content">
+          <h2 class="categories-title">Browse Product Categories</h2>
 
-      <div class="product-footer" data-aos="fade-up" data-aos-delay="200">
-        <a href="#" class="product-more-button">View All Products</a>
-      </div>
-    </div> <!-- end of .product-section -->
-  </div> 
-  </div>
-
-<!-- Slide 3: Product Categories -->
-<div class="swiper-slide product-categories-slide" id="categories">
-  <div class="categories-scroll-wrapper">
-
-    <!-- Main Product Categories Section -->
-    <section class="product-categories-section">
-      <div class="product-categories-content">
-
-        <div class="categories-logo-wrapper">
-
-        <h2 class="categories-title">Browse Product Categories</h2>
-
-        <div class="categories-cards">
-          <!-- Category 1 -->
-          <div class="category-card">
-            <div class="category-card-inner">
-              <div class="category-front" style="background-image: url('images/product1.jpg');">
-                <span>Fresh Fruits & Vegetables</span>
-              </div>
-              <div class="category-back">
-                <h3>Fresh Fruits & Vegetables</h3>
-                <p>Daily stocked fresh produce with a focus on South Asian staples and seasonal variety.</p>
+          <div class="categories-cards">
+            <!-- Repeatable Category Cards -->
+            <!-- Example Card -->
+            <div class="category-card">
+              <div class="category-card-inner">
+                <div class="category-front" style="background-image: url('images/product1.jpg');">
+                  <span>Fresh Fruits & Vegetables</span>
+                </div>
+                <div class="category-back">
+                  <h3>Fresh Fruits & Vegetables</h3>
+                  <p>Daily stocked fresh produce with a focus on South Asian staples and seasonal variety.</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Category 2 -->
-          <div class="category-card">
-            <div class="category-card-inner">
-              <div class="category-front" style="background-image: url('images/product2.jpg');">
-                <span>Oils & Spices</span>
-              </div>
-              <div class="category-back">
-                <h3>Oils & Spices</h3>
-                <p>Aromatic blends, whole and ground spices, and essential oils for authentic cuisine.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 3 -->
+          
+    <!-- Category 3 -->
           <div class="category-card">
             <div class="category-card-inner">
               <div class="category-front" style="background-image: url('images/product3.jpg');">
@@ -145,6 +120,7 @@
               <div class="category-front" style="background-image: url('images/product4.jpg');">
                 <span>Dairy & Dahi</span>
               </div>
+              
               <div class="category-back">
                 <h3>Dairy & Dahi</h3>
                 <p>Yogurt, paneer, milk, and specialty dairy products from top suppliers.</p>
@@ -177,146 +153,63 @@
               </div>
             </div>
           </div>
+        </div>         
         </div>
 
-        <a href="Customers/" class="categories-button">Explore All Brands</a>
-      </div>
-    </section>
+          <a href="Customers/" class="categories-button">Explore All Brands</a>
+        </div>
+      </section>
 
-    <!-- Brand Logo Strip -->
-    <section class="product-brand-strip">
-      <h3>Explore All Brands:</h3>
-      <div class="product-brand-logos">
-        <a href="#"><picture><source srcset="images/brands/brand6.webp" type="image/webp"><img src="images/brands/brand6.png" alt="Brand 6" /></picture></a>
-        <a href="#"><picture><source srcset="images/brands/brand2.webp" type="image/webp"><img src="images/brands/brand2.png" alt="Brand 2" /></picture></a>
-        <a href="#"><picture><source srcset="images/brands/brand3.webp" type="image/webp"><img src="images/brands/brand3.png" alt="Brand 3" /></picture></a>
-        <a href="#"><picture><source srcset="images/brands/brand4.webp" type="image/webp"><img src="images/brands/brand4.png" alt="Brand 4" /></picture></a>
-        <a href="#"><picture><source srcset="images/brands/brand5.webp" type="image/webp"><img src="images/brands/brand5.png" alt="Brand 5" /></picture></a>
-        <a href="#"><picture><source srcset="images/brands/brand1.webp" type="image/webp"><img src="images/brands/brand1.png" alt="Brand 1" /></picture></a>
-
-      </div>
-    </section>
-
-  </div>
-</div>
-
-
-
-
-
-      
+      <!-- Brand Logo Strip -->
+      <section class="product-brand-strip">
+        <h3>Explore All Brands:</h3>
+        <div class="product-brand-logos">
+          <a href="#"><img src="images/brands/brand1.png" alt="Brand 1"></a>
+          <a href="#"><img src="images/brands/brand2.png" alt="Brand 2"></a>
+          <a href="#"><img src="images/brands/brand3.png" alt="Brand 3"></a>
+          <a href="#"><img src="images/brands/brand4.png" alt="Brand 4"></a>
+          <a href="#"><img src="images/brands/brand5.png" alt="Brand 5"></a>
+          <a href="#"><img src="images/brands/brand6.png" alt="Brand 6"></a>
+        </div>
+      </section>
     </div>
-  </div>
+  </section>
 
-<!-- Scripts -->
-<!-- Load external libraries -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-<script>
-  // Initialize AOS
-  AOS.init();
-
-  // Initialize Swiper for vertical scroll
-  const swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    mousewheel: true,
-    slidesPerView: 1,
-    speed: 800,
-    effect: 'slide',
-  });
-
-  // Sticky header toggle based on slide
-  const header = document.getElementById('mainHeader');
-  const headerUnderlay = document.querySelector('.header-underlay');
-
-  swiper.on('slideChangeTransitionStart', () => {
-    if (swiper.activeIndex > 0) {
-      header.classList.add('scrolled');
-      headerUnderlay.classList.add('visible');
-    } else {
-      header.classList.remove('scrolled');
-      headerUnderlay.classList.remove('visible');
-    }
-  });
-
-swiper.on('slideChangeTransitionEnd', () => {
-  const currentSlide = swiper.slides[swiper.activeIndex];
-  if (currentSlide.id === 'products' || currentSlide.id === 'categories') {
-    AOS.refreshHard();
-  }
-});
-
-
-  // Load Featured Products
-  const productGrid = document.querySelector('.product-grid');
-  const loader = document.getElementById('productLoading');
-
-  fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.innerHTML = `
-          <img src="${item['Product URL']}" alt="${item['Alt Text']}">
-          <h4>${item['Product Name']}</h4>
-        `;
-        productGrid.appendChild(card);
-      });
-    })
-    .catch(error => {
-      console.error('Failed to load products:', error);
-      productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
-    })
-    .finally(() => {
-  loader.style.display = 'none';
-  const activeIndex = swiper.activeIndex;
-  swiper.update();
-  swiper.slideTo(activeIndex, 0); // prevent scroll jump
-  AOS.refresh();      
-});
-
-  // Prevent Swiper from hijacking scroll when inside .product-scroll-wrapper and .categories-scroll-wrapper
-  
-document.querySelectorAll('.product-scroll-wrapper, .categories-scroll-wrapper').forEach(scrollWrapper => {
-  scrollWrapper.addEventListener('wheel', function (e) {
-    const delta = e.deltaY;
-    const atTop = this.scrollTop === 0;
-    const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
-
-    if ((delta < 0 && atTop) || (delta > 0 && atBottom)) {
-      // Let Swiper handle scroll
-    } else {
-      e.stopPropagation(); // Prevent Swiper from hijacking scroll
-    }
-  });
-});
-  
-</script>
-
-  <!-- Product Categories Scripts -->
-
-<script>
-  document.querySelectorAll('.category-card').forEach(card => {
-    card.addEventListener('click', function () {
-      // Optional: remove flip from all others
-      document.querySelectorAll('.category-card').forEach(c => {
-        if (c !== this) c.classList.remove('flipped');
+    fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+      .then(res => res.json())
+      .then(data => {
+        const productGrid = document.getElementById('productGrid');
+        const loader = document.getElementById('productLoading');
+        data.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <img src="${item['Product URL']}" alt="${item['Alt Text']}">
+            <h4>${item['Product Name']}</h4>
+          `;
+          productGrid.appendChild(card);
+        });
+        loader.style.display = 'none';
+        AOS.refresh();
+      })
+      .catch(error => {
+        document.getElementById('productGrid').innerHTML = '<p style="color: red;">Unable to load products.</p>';
       });
 
-      // Toggle flip
-      this.classList.toggle('flipped');
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', function () {
+        document.querySelectorAll('.category-card').forEach(c => {
+          if (c !== this) c.classList.remove('flipped');
+        });
+        this.classList.toggle('flipped');
+      });
     });
-  });
-</script>
-
-
-  
-
-
-
-
+  </script>
 </body>
 
 </html>
