@@ -89,8 +89,10 @@
   </div>
 
  <!-- Scripts -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <script>
   // Initialize AOS animations
   AOS.init();
@@ -105,23 +107,21 @@
   });
 
   // Scroll-based header style trigger
- const header = document.getElementById('mainHeader');
-const headerUnderlay = document.querySelector('.header-underlay');
+  const header = document.getElementById('mainHeader');
+  const headerUnderlay = document.querySelector('.header-underlay');
 
-swiper.on('slideChangeTransitionStart', () => {
-  if (swiper.activeIndex > 0) {
-    header.classList.add('scrolled');
-    headerUnderlay.classList.add('visible');
-  } else {
-    header.classList.remove('scrolled');
-    headerUnderlay.classList.remove('visible');
-  }
-});
-</script>
+  swiper.on('slideChangeTransitionStart', () => {
+    if (swiper.activeIndex > 0) {
+      header.classList.add('scrolled');
+      headerUnderlay.classList.add('visible');
+    } else {
+      header.classList.remove('scrolled');
+      headerUnderlay.classList.remove('visible');
+    }
+  });
 
- <!-- Featured Products Scripts -->
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
+  // Load Featured Products
+  document.addEventListener("DOMContentLoaded", () => {
     const productGrid = document.querySelector('.product-grid');
     const loader = document.getElementById('productLoading');
 
@@ -143,10 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
         productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
       })
       .finally(() => {
-        loader.style.display = 'none'; // hide the spinner
+        loader.style.display = 'none';
+        swiper.update();     // Ensure Swiper recalculates layout
+        AOS.refresh();       // Ensure animations trigger properly
       });
   });
 </script>
+
 
 
 
