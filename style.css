@@ -328,3 +328,9 @@ html, body {
     transform: rotate(360deg);
   }
 }
+
+#products [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto;
+}
