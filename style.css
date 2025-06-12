@@ -366,7 +366,6 @@ html, body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 100%;
 }
 
 .categories-scroll-wrapper {
@@ -384,7 +383,7 @@ html, body {
   padding: 240px 8% 80px;
   color: #fff;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
 }
 
 .product-categories-section::before {
@@ -526,7 +525,7 @@ html, body {
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
   gap: 60px;
-  width: 100%;
+  width: 100vw;
 }
 
 .product-brand-strip h3 {
