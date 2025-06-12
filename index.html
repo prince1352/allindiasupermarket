@@ -89,11 +89,15 @@
   </div>
 
 <!-- Scripts -->
+<!-- Load external libraries -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <script>
+  // Initialize AOS
   AOS.init();
 
+  // Initialize Swiper for vertical scroll
   const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     mousewheel: true,
@@ -102,6 +106,7 @@
     effect: 'slide',
   });
 
+  // Sticky header toggle based on slide
   const header = document.getElementById('mainHeader');
   const headerUnderlay = document.querySelector('.header-underlay');
 
@@ -112,6 +117,14 @@
     } else {
       header.classList.remove('scrolled');
       headerUnderlay.classList.remove('visible');
+    }
+  });
+
+  // Force AOS refresh when product slide becomes active
+  swiper.on('slideChangeTransitionEnd', () => {
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    if (currentSlide.id === 'products') {
+      AOS.refreshHard(); // Force animations to trigger inside Swiper
     }
   });
 
@@ -138,10 +151,11 @@
     })
     .finally(() => {
       loader.style.display = 'none';
-      swiper.update();
-      AOS.refresh();
+      swiper.update();     // Recalculate Swiper layout
+      AOS.refresh();       // Trigger AOS visibility recalculation
     });
 </script>
+
 
 
 
