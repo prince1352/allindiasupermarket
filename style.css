@@ -21,7 +21,8 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -386,7 +387,8 @@ html, body {
   padding: 240px 8% 80px;
   color: #fff;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
 }
 
 .product-categories-section::before {
@@ -528,7 +530,13 @@ html, body {
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
   gap: 60px;
-  width: 100vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-brand-strip > * {
+  flex-shrink: 0;
 }
 
 .product-brand-strip h3 {
