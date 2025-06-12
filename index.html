@@ -90,18 +90,18 @@
   });
 
   // Scroll-based header style trigger
-  const header = document.getElementById('mainHeader');
-  const headerUnderlay = document.querySelector('.header-underlay');
+ const header = document.getElementById('mainHeader');
+const headerUnderlay = document.querySelector('.header-underlay');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.classList.add('scrolled');
-      headerUnderlay.classList.add('visible');
-    } else {
-      header.classList.remove('scrolled');
-      headerUnderlay.classList.remove('visible');
-    }
-  });
+swiper.on('slideChangeTransitionStart', () => {
+  if (swiper.activeIndex > 0) {
+    header.classList.add('scrolled');
+    headerUnderlay.classList.add('visible');
+  } else {
+    header.classList.remove('scrolled');
+    headerUnderlay.classList.remove('visible');
+  }
+});
 </script>
 
 
