@@ -71,28 +71,31 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
+ <script>
+  AOS.init();
 
-    const swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      mousewheel: true,
-      slidesPerView: 1,
-      speed: 800,
-      effect: 'slide',
-    });
+  const swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    mousewheel: true,
+    slidesPerView: 1,
+    speed: 800,
+    effect: 'slide',
+  });
 
-    const header = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
+  const header = document.getElementById('mainHeader');
+  const headerUnderlay = document.querySelector('.header-underlay');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+      headerUnderlay.classList.add('visible');
+    } else {
+      header.classList.remove('scrolled');
+      headerUnderlay.classList.remove('visible');
+    }
+  });
+</script>
+
 </body>
 
 </html>
