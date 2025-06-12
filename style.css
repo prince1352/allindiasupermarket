@@ -208,7 +208,6 @@ html, body {
   text-align: center;
 }
 
-
 .brand-logos {
   display: flex;
   justify-content: space-between;
@@ -220,7 +219,6 @@ html, body {
 }
 
 .brand-logos picture {
-.brand-logos picture {
   flex: 1 1 0;
   display: flex;
   align-items: center;
@@ -231,9 +229,9 @@ html, body {
   height: 50px;
   max-width: 100px;
   width: 100%;
-  opacity: 0.9;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+  opacity: 0.85;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
 }
 
 .brand-logos picture img:hover {
