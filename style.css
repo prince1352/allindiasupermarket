@@ -558,3 +558,9 @@ html, body {
   transform: scale(1.1);
 }
 
+.product-categories-section,
+.product-brand-strip {
+  max-width: none !important;
+  width: 100vw !important;
+}
+
