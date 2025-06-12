@@ -222,10 +222,16 @@ html, body {
         Product Slide 
 ----------------------------------*/
 
-  .product-section {
+.product-slide {
+  position: relative;
+  z-index: 2;
+}
+
+.product-section {
     padding: 120px 10% 60px;
-    background-color: transparent;
+    background-color: var(--sand)
     text-align: center;
+    z-index: 2;
   }
 
   .product-header {
