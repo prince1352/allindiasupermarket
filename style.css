@@ -400,26 +400,6 @@ html, body {
   text-align: center;
 }
 
-/* Logo & Line */
-.categories-logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  gap: 20px;
-}
-
-.categories-line {
-  flex: 1;
-  height: 2px;
-  background-color: white;
-}
-
-.categories-logo {
-  height: 60px;
-  width: auto;
-}
-
 /* Title */
 .categories-title {
   font-size: 2.2rem;
