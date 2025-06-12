@@ -54,7 +54,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 120px; /* consistent spacing from logo to navs */
+  gap: 120px;
   position: relative;
 }
 
@@ -85,11 +85,10 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Underline from edge of first nav item to last */
 .nav-underline {
   margin-top: 12px;
   height: 1px;
-  width: calc(100% - 120px); /* leave margin on sides */
+  width: calc(100% - 120px);
   background-color: var(--green);
   opacity: 0.2;
 }
@@ -112,30 +111,10 @@ html, body {
 .header-underlay.visible {
   opacity: 1;
 }
-/* --------------------------------
-        Swiper section 
-----------------------------------*/
 
-.swiper-container {
-  height: 100vh;
-  width: 100%;
-}
-
-.swiper-slide {
-  width: 100vw !important;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 0 40px;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* --------------------------------
-        Landing section 
-----------------------------------*/
+/* -------------------------------
+        Landing Section Styles
+-------------------------------- */
 
 .landing-slide {
   background: linear-gradient(to bottom right, var(--sand), #ffffff);
@@ -148,6 +127,7 @@ html, body {
   text-align: center;
   overflow: hidden;
   z-index: 0;
+  width: 100%;
 }
 
 .landing-background {
@@ -166,6 +146,16 @@ html, body {
   object-fit: cover;
 }
 
+.landing-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 2;
+}
+
 .landing-content-wrapper {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
@@ -176,20 +166,6 @@ html, body {
   width: 100%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
-}
-
-.landing-content-wrapper[data-aos] {
-  will-change: transform, opacity;
-}
-
-.landing-content {
-  position: relative; /* important to make z-index apply */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  z-index: 2;
 }
 
 .landing-content h1 {
@@ -209,7 +185,7 @@ html, body {
   padding: 14px 32px;
   background-color: var(--coral);
   color: var(--sand);
-  border: 2px solid transparent; /* set default border */
+  border: 2px solid transparent;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -236,14 +212,6 @@ html, body {
   z-index: 2;
 }
 
-.product-scroll-wrapper {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
 .product-section {
   padding: 240px 10% 240px;
   background-color: var(--sand);
@@ -252,74 +220,21 @@ html, body {
   box-sizing: border-box;
 }
 
-  .product-header {
-    margin-bottom: 40px;
-  }
+.product-header {
+  margin-bottom: 40px;
+}
 
-  .product-title {
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--green);
-  }
+.product-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--green);
+}
 
-  .product-subtitle {
-    font-size: 1.25rem;
-    color: #555;
-    margin-top: 10px;
-  }
-
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
-    justify-content: center;
-    padding: 20px 0;
-  }
-
-  .product-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .product-card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-
-  .product-card h4 {
-    font-size: 1.2rem;
-    color: var(--green);
-  }
-
-  .product-footer {
-    margin-top: 40px;
-  }
-
-  .product-more-button {
-    padding: 12px 28px;
-    background-color: var(--coral);
-    color: var(--sand);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-
-  .product-more-button:hover {
-    background-color: transparent;
-    color: var(--coral);
-    border: 2px solid var(--coral);
-  }
+.product-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-top: 10px;
+}
 
 .product-loading {
   display: flex;
@@ -343,13 +258,57 @@ html, body {
   }
 }
 
-.product-scroll-wrapper {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px 0;
 }
 
-.product-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-card h4 {
+  font-size: 1.2rem;
+  color: var(--green);
+}
+
+.product-footer {
+  margin-top: 40px;
+}
+
+.product-more-button {
+  padding: 12px 28px;
+  background-color: var(--coral);
+  color: var(--sand);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.product-more-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
 }
 
 #products [data-aos] {
@@ -359,7 +318,7 @@ html, body {
 }
 
 /* --------------------------------
-        Product Categoies Slide 
+        Product Categories Slide 
 ----------------------------------*/
 
 .product-categories-slide {
@@ -500,7 +459,7 @@ html, body {
   padding: 0 10px;
 }
 
-/* Optional button */
+/* Explore All Brands Button */
 .categories-button {
   display: inline-block;
   padding: 14px 32px;
@@ -521,6 +480,7 @@ html, body {
   border: 2px solid var(--coral);
 }
 
+/* Brand Logo Bar */
 .product-brand-strip {
   background-color: #f8f8f5;
   padding: 20px 2%;
@@ -566,8 +526,9 @@ html, body {
   transform: scale(1.1);
 }
 
+/* Ensure full width always */
 .product-categories-section,
 .product-brand-strip {
   max-width: none !important;
-  width: 100% !important; /* instead of 100vw */
+  width: 100% !important;
 }
