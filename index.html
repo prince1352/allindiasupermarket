@@ -87,6 +87,126 @@
   </div> 
   </div>
 
+
+<!-- Slide 3: Product Categories -->
+<div class="swiper-slide categories-slide" id="categories">
+  <div class="categories-scroll-wrapper">
+  <section class="categories-section">
+    <div class="categories-overlay"></div>
+    <div class="categories-content">
+
+      <div class="specialize-logo-wrapper">
+        <div class="specialize-line"></div>
+        <img src="images/Logo-W.png" alt="Logo" class="specialize-logo" />
+        <div class="specialize-line"></div>
+      </div>
+
+      <h2 class="specialize-title">Browse Product Categories</h2>
+
+      <div class="specialize-cards">
+        <!-- Category 1 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product1.jpg');">
+              <span>Fresh Fruits & Vegetables</span>
+            </div>
+            <div class="card-back">
+              <h3>Fresh Fruits & Vegetables</h3>
+              <p>Daily stocked fresh produce with a focus on South Asian staples and seasonal variety.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product2.jpg');">
+              <span>Oils & Spices</span>
+            </div>
+            <div class="card-back">
+              <h3>Oils & Spices</h3>
+              <p>Aromatic blends, whole and ground spices, and essential oils for authentic cuisine.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product1.jpg');">
+              <span>Dry Goods & Lentils</span>
+            </div>
+            <div class="card-back">
+              <h3>Dry Goods & Lentils</h3>
+              <p>From basmati rice to chana dal, our dry pantry items are delivered in bulk or retail size.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product2.jpg');">
+              <span>Dairy & Dahi</span>
+            </div>
+            <div class="card-back">
+              <h3>Dairy & Dahi</h3>
+              <p>Yogurt, paneer, milk, and specialty dairy products from top suppliers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product1.jpg');">
+              <span>Specialty Drinks</span>
+            </div>
+            <div class="card-back">
+              <h3>Specialty Drinks</h3>
+              <p>Falooda mixes, masala sodas, mango drinks, rose syrup, and imported favorites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 6 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front" style="background-image: url('images/product2.jpg');">
+              <span>Snacks & Sweets</span>
+            </div>
+            <div class="card-back">
+              <h3>Snacks & Sweets</h3>
+              <p>Traditional snacks like namkeen, chakli, soan papdi, and imported sweets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="Customers/" class="specialize-button">Explore All Brands</a>
+    </div>
+  </section>
+
+  <!-- Brand Strip -->
+  <section class="brand-showcase-section">
+    <div class="brand-showcase-row">
+      <div class="brand-showcase-text">
+        <h2>Explore All Brands:</h2>
+      </div>
+      <div class="brand-logo-row">
+        <a href="#"><picture><source srcset="images/brands/brand1.webp" type="image/webp"><img src="images/brands/brand1.png" alt="Brand 1" /></picture></a>
+        <a href="#"><picture><source srcset="images/brands/brand2.webp" type="image/webp"><img src="images/brands/brand2.png" alt="Brand 2" /></picture></a>
+        <a href="#"><picture><source srcset="images/brands/brand1.webp" type="image/webp"><img src="images/brands/brand1.png" alt="Brand 3" /></picture></a>
+        <a href="#"><picture><source srcset="images/brands/brand2.webp" type="image/webp"><img src="images/brands/brand2.png" alt="Brand 4" /></picture></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+      
     </div>
   </div>
 
@@ -124,10 +244,11 @@
 
 swiper.on('slideChangeTransitionEnd', () => {
   const currentSlide = swiper.slides[swiper.activeIndex];
-  if (currentSlide.id === 'products') {
-    AOS.refreshHard(); // Force animations to trigger inside Swiper
+  if (currentSlide.id === 'products' || currentSlide.id === 'categories') {
+    AOS.refreshHard();
   }
 });
+
 
   // Load Featured Products
   const productGrid = document.querySelector('.product-grid');
@@ -158,23 +279,39 @@ swiper.on('slideChangeTransitionEnd', () => {
   AOS.refresh();      
 });
 
-  // Prevent Swiper from hijacking scroll when inside .product-scroll-wrapper
-const scrollWrapper = document.querySelector('.product-scroll-wrapper');
+  // Prevent Swiper from hijacking scroll when inside .product-scroll-wrapper and .categories-scroll-wrapper
+  
+document.querySelectorAll('.product-scroll-wrapper, .categories-scroll-wrapper').forEach(scrollWrapper => {
+  scrollWrapper.addEventListener('wheel', function (e) {
+    const delta = e.deltaY;
+    const atTop = this.scrollTop === 0;
+    const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
 
-scrollWrapper.addEventListener('wheel', function (e) {
-  const delta = e.deltaY;
-  const atTop = this.scrollTop === 0;
-  const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
-
-  if ((delta < 0 && atTop) || (delta > 0 && atBottom)) {
-    // Let Swiper handle scroll
-  } else {
-    e.stopPropagation(); // Stop Swiper from interfering
-  }
+    if ((delta < 0 && atTop) || (delta > 0 && atBottom)) {
+      // Let Swiper handle scroll
+    } else {
+      e.stopPropagation(); // Prevent Swiper from hijacking scroll
+    }
+  });
 });
   
 </script>
 
+  <!-- Product Categories Scripts -->
+
+<script>
+  document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function () {
+    document.querySelectorAll('.card').forEach(c => {
+      if (c !== this) c.classList.remove('flipped');
+    });
+    this.classList.toggle('flipped');
+  });
+});
+  
+</script>
+
+  
 
 
 
