@@ -380,7 +380,7 @@ html, body {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 100px 8% 80px;
+  padding: 240px 8% 80px;
   color: #fff;
   overflow: hidden;
 }
