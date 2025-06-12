@@ -88,16 +88,10 @@
     </div>
   </div>
 
- <!-- Scripts -->
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
 <script>
-  // Initialize AOS animations
   AOS.init();
 
-  // Initialize Swiper for vertical full-page scroll
   const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     mousewheel: true,
@@ -106,7 +100,6 @@
     effect: 'slide',
   });
 
-  // Scroll-based header style trigger
   const header = document.getElementById('mainHeader');
   const headerUnderlay = document.querySelector('.header-underlay');
 
@@ -121,33 +114,31 @@
   });
 
   // Load Featured Products
-  document.addEventListener("DOMContentLoaded", () => {
-    const productGrid = document.querySelector('.product-grid');
-    const loader = document.getElementById('productLoading');
+  const productGrid = document.querySelector('.product-grid');
+  const loader = document.getElementById('productLoading');
 
-    fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
-      .then(res => res.json())
-      .then(data => {
-        data.forEach(item => {
-          const card = document.createElement('div');
-          card.className = 'product-card';
-          card.innerHTML = `
-            <img src="${item['Product Url']}" alt="${item['Alt Text']}">
-            <h4>${item['Product Name']}</h4>
-          `;
-          productGrid.appendChild(card);
-        });
-      })
-      .catch(error => {
-        console.error('Failed to load products:', error);
-        productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
-      })
-      .finally(() => {
-        loader.style.display = 'none';
-        swiper.update();     // Ensure Swiper recalculates layout
-        AOS.refresh();       // Ensure animations trigger properly
+  fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${item['Product Url']}" alt="${item['Alt Text']}">
+          <h4>${item['Product Name']}</h4>
+        `;
+        productGrid.appendChild(card);
       });
-  });
+    })
+    .catch(error => {
+      console.error('Failed to load products:', error);
+      productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
+    })
+    .finally(() => {
+      loader.style.display = 'none';
+      swiper.update();
+      AOS.refresh();
+    });
 </script>
 
 
