@@ -70,10 +70,14 @@
     </div>
   </div>
 
-  <!-- Scripts -->
- <script>
+ <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS animations
   AOS.init();
 
+  // Initialize Swiper for vertical full-page scroll
   const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     mousewheel: true,
@@ -82,6 +86,7 @@
     effect: 'slide',
   });
 
+  // Scroll-based header style trigger
   const header = document.getElementById('mainHeader');
   const headerUnderlay = document.querySelector('.header-underlay');
 
@@ -95,6 +100,7 @@
     }
   });
 </script>
+
 
 </body>
 
