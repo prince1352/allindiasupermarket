@@ -145,39 +145,6 @@ html, body {
   text-align: center;
 }
 
-.landing-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0; /* make it explicitly the lowest layer */
-}
-
-.landing-background picture,
-.landing-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute; /* IMPORTANT to be layered */
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.landing-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background-color: rgba(245, 237, 224, 0.2);
-  z-index: 1;
-}
-
 .landing-content {
   position: relative; /* important to make z-index apply */
   display: flex;
