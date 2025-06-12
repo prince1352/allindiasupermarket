@@ -186,7 +186,7 @@ html, body {
 .brand-showcase {
   margin-top: 60px;
   padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(21, 64, 54, 0.85); /* var(--green) with 85% opacity */
   backdrop-filter: blur(8px);
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -199,7 +199,7 @@ html, body {
 .brand-label {
   font-size: 1.3rem;
   font-weight: 500;
-  color: var(--green);
+  color: var(--sand);
   margin-bottom: 24px;
   letter-spacing: 1px;
   text-align: center;
@@ -233,6 +233,7 @@ html, body {
 .brand-logos picture img:hover {
   transform: scale(1.1);
   opacity: 1;
+  filter: brightness(1.1);
 }
 
 /* --------------------------------
