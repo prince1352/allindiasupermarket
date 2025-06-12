@@ -202,7 +202,7 @@ html, body {
 
 .landing-content p {
   font-size: 1.25rem;
-  color: var(--coral);
+  color: var(--green);
   margin-bottom: 40px;
 }
 
@@ -229,7 +229,7 @@ html, body {
 ----------------------------------*/
 
 .product-slide {
-  background-color: #f8f8f5;
+  background-color: var(--sand);
   text-align: center;
   padding: 40px;
 }
