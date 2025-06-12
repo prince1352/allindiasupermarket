@@ -222,7 +222,7 @@ html, body {
 
 
 /* --------------------------------
-        Product Slide 
+        Featured Product Slide 
 ----------------------------------*/
 
 .product-slide {
@@ -355,3 +355,221 @@ html, body {
   transform: none !important;
   pointer-events: auto;
 }
+
+/* --------------------------------
+        Product Categoies Slide 
+----------------------------------*/
+.product-categories-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--sand);
+  z-index: 2;
+}
+
+.categories-scroll-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Main Section Background */
+.product-categories-section {
+  background: url('images/products-background.jpg') no-repeat center center/cover;
+  position: relative;
+  padding: 100px 8% 80px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.product-categories-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.product-categories-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Logo & Line */
+.categories-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.categories-line {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+}
+
+.categories-logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Title */
+.categories-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+/* Card Grid */
+.categories-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  perspective: 1000px;
+  height: 240px;
+  cursor: pointer;
+}
+
+.category-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.category-card.flipped .category-card-inner {
+  transform: rotateY(180deg);
+}
+
+.category-card:not(.flipped):hover .category-card-inner {
+  transform: scale(1.05);
+}
+
+/* Card Front and Back */
+.category-front,
+.category-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.category-front {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.category-front::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.category-front span {
+  z-index: 2;
+  position: relative;
+}
+
+.category-back {
+  background-color: var(--coral);
+  color: #fff;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.category-back h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.category-back p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+/* Optional button */
+.categories-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--coral);
+  color: var(--sand);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.categories-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+
+.product-brand-strip {
+  background-color: #f8f8f5;
+  padding: 20px 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #ddd;
+  gap: 30px;
+}
+
+.product-brand-strip h3 {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.product-brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.product-brand-logos img {
+  height: 28px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.product-brand-logos img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
