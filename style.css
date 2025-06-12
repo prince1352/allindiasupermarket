@@ -229,7 +229,7 @@ html, body {
 
 .product-section {
     padding: 120px 10% 60px;
-    background-color: var(--sand)
+    background-color: var(--sand);
     text-align: center;
     z-index: 2;
   }
