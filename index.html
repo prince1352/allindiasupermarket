@@ -298,16 +298,19 @@ document.querySelectorAll('.product-scroll-wrapper, .categories-scroll-wrapper')
   <!-- Product Categories Scripts -->
 
 <script>
-  document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', function () {
-    document.querySelectorAll('.card').forEach(c => {
-      if (c !== this) c.classList.remove('flipped');
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('click', function () {
+      // Optional: remove flip from all others
+      document.querySelectorAll('.category-card').forEach(c => {
+        if (c !== this) c.classList.remove('flipped');
+      });
+
+      // Toggle flip
+      this.classList.toggle('flipped');
     });
-    this.classList.toggle('flipped');
   });
-});
-  
 </script>
+
 
   
 
