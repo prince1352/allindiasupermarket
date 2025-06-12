@@ -145,7 +145,7 @@ html, body {
   padding: 0 40px;
   text-align: center;
   overflow: hidden;
-  z-indez: 0;
+  z-index: 0;
 }
 
 .landing-background {
@@ -327,11 +327,4 @@ html, body {
   to {
     transform: rotate(360deg);
   }
-}
-
-.product-slide, .product-section, .product-header, .product-grid, .product-footer {
-  z-index: 9999 !important;
-  position: relative !important;
-  background-color: #fff !important;
-  color: black !important;
 }
