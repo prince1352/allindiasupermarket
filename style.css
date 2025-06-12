@@ -534,6 +534,7 @@ html, body {
   background-color: var(--sand);
   padding: 120px 4%;
   text-align: center;
+  align-items: center;
 }
 
 .wholesale-wrapper {
