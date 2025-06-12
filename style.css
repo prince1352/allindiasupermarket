@@ -230,6 +230,12 @@ html, body {
   z-index: 2;
 }
 
+.product-scroll-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .product-section {
     padding: 120px 10% 60px;
     background-color: var(--sand);
