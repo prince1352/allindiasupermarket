@@ -380,9 +380,10 @@ html, body {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 240px 0% 80px;
+  padding: 240px 8% 80px;
   color: #fff;
   overflow: hidden;
+  width: 100%;
 }
 
 .product-categories-section::before {
@@ -517,13 +518,14 @@ html, body {
 
 .product-brand-strip {
   background-color: #f8f8f5;
-  padding: 20px 0%;
+  padding: 20px 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   border-top: 1px solid #ddd;
-  gap: 30px;
+  gap: 60px;
+  width: 100%;
 }
 
 .product-brand-strip h3 {
@@ -537,13 +539,13 @@ html, body {
 .product-brand-logos {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 80px;
   flex: 1;
   justify-content: flex-start;
 }
 
 .product-brand-logos img {
-  height: 56px;
+  height: 48px;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
