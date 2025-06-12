@@ -102,14 +102,19 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px; /* match or exceed header height */
+  height: 130px;
+  background-color: rgba(245, 237, 224, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-color: transparent;
   z-index: 500;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+.header-underlay.visible {
+  opacity: 1;
+}
 /* --------------------------------
         Swiper section 
 ----------------------------------*/
