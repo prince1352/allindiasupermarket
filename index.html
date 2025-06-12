@@ -104,6 +104,28 @@ swiper.on('slideChangeTransitionStart', () => {
 });
 </script>
 
+ <!-- Featured Products Scripts -->
+  <script>
+  fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.querySelector('.product-grid');
+      data.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${product['Product Url']}" alt="${product['Alt Text']}">
+          <h4>${product['Product Name']}</h4>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading products:', error);
+    });
+</script>
+
+
 
 </body>
 
