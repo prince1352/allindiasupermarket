@@ -524,3 +524,86 @@ html, body {
   max-width: none !important;
   width: 100% !important;
 }
+
+/* --------------------------------
+        Whole Sale Section 
+----------------------------------*/
+
+.wholesale-section {
+  background-color: var(--sand);
+  padding: 120px 10%;
+  text-align: center;
+}
+
+.wholesale-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wholesale-title {
+  font-size: 2.5rem;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.wholesale-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wholesale-features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.wholesale-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+}
+
+.wholesale-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.wholesale-card h3 {
+  font-size: 1.4rem;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.wholesale-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.wholesale-button {
+  display: inline-block;
+  background-color: var(--coral);
+  color: var(--sand);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.wholesale-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+
