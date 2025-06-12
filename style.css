@@ -37,6 +37,8 @@ html, body {
   z-index: 999;
   background-color: transparent;
   transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  align-items: center;
+  justify-content: center;
 }
 
 .main-header.scrolled {
