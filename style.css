@@ -177,6 +177,8 @@ html, body {
   width: 100%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-content-wrapper[data-aos] {
@@ -215,7 +217,6 @@ html, body {
   font-weight: bold;
   border-radius: 6px;
   transition: all 0.3s ease;
-  margin-bottom: 80px;
 }
 
 .landing-button:hover {
