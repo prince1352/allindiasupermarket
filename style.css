@@ -234,6 +234,7 @@ html, body {
     background-color: var(--sand);
     text-align: center;
     z-index: 2;
+    position: relative;
   }
 
   .product-header {
