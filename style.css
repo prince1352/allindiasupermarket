@@ -188,6 +188,19 @@ html, body {
   z-index: 2;
 }
 
+.landing-content h1 {
+  font-size: 3.5rem;
+  color: var(--green);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.landing-content p {
+  font-size: 1.25rem;
+  color: var(--coral);
+  margin-bottom: 40px;
+}
+
 .landing-button {
   padding: 14px 32px;
   background-color: var(--coral);
