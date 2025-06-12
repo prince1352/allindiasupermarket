@@ -380,7 +380,7 @@ html, body {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 240px 8% 80px;
+  padding: 240px 0% 80px;
   color: #fff;
   overflow: hidden;
 }
@@ -537,7 +537,7 @@ html, body {
 
 .product-brand-strip {
   background-color: #f8f8f5;
-  padding: 20px 2%;
+  padding: 20px 0%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -563,7 +563,7 @@ html, body {
 }
 
 .product-brand-logos img {
-  height: 28px;
+  height: 56px;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
