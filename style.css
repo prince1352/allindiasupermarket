@@ -39,7 +39,6 @@ html, body {
 
 .main-header.scrolled {
   background-color: transparent;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-wrapper {
@@ -73,11 +72,6 @@ html, body {
   transition: color var(--transition-speed);
   font-size: 1.2rem;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.main-header.scrolled .nav-left li a,
-.main-header.scrolled .nav-right li a {
-  color: var(--sand);
 }
 
 .logo img {
