@@ -145,12 +145,43 @@ html, body {
   text-align: center;
 }
 
+.landing-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.landing-background picture,
+.landing-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(245, 237, 224, 0.2); /* slightly tint with warm sand */
+  z-index: 1;
+}
+
 .landing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%; /* required for vertical centering */
+  z-index: 2
 }
 
 .landing-content h1 {
