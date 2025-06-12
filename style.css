@@ -222,19 +222,77 @@ html, body {
         Product Slide 
 ----------------------------------*/
 
-.product-slide {
-  background-color: var(--sand);
-  text-align: center;
-  padding: 40px;
-}
+  .product-section {
+    padding: 120px 10% 60px;
+    background-color: var(--sand);
+    text-align: center;
+  }
 
-.section-content h2 {
-  font-size: 2.5rem;
-  color: var(--green);
-  margin-bottom: 20px;
-}
+  .product-header {
+    margin-bottom: 40px;
+  }
 
-.section-content p {
-  font-size: 1.2rem;
-  color: #333;
-}
+  .product-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  .product-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .product-card h4 {
+    font-size: 1.2rem;
+    color: var(--green);
+  }
+
+  .product-footer {
+    margin-top: 40px;
+  }
+
+  .product-more-button {
+    padding: 12px 28px;
+    background-color: var(--coral);
+    color: var(--sand);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .product-more-button:hover {
+    background-color: transparent;
+    color: var(--coral);
+    border: 2px solid var(--coral);
+  }
