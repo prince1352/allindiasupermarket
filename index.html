@@ -120,28 +120,30 @@ swiper.on('slideChangeTransitionStart', () => {
 
  <!-- Featured Products Scripts -->
   <script>
- const productGrid = document.querySelector('.product-grid');
-const loader = document.getElementById('productLoading');
+document.addEventListener("DOMContentLoaded", () => {
+    const productGrid = document.querySelector('.product-grid');
+    const loader = document.getElementById('productLoading');
 
-fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
-  .then(res => res.json())
-  .then(data => {
-    data.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'product-card';
-      card.innerHTML = `
-        <img src="${item['Product Url']}" alt="${item['Alt Text']}">
-        <h4>${item['Product Name']}</h4>
-      `;
-      productGrid.appendChild(card);
-    });
-  })
-  .catch(error => {
-    console.error('Failed to load products:', error);
-    productGrid.innerHTML = '<p>Unable to load products at the moment.</p>';
-  })
-  .finally(() => {
-    loader.style.display = 'none'; // hide spinner once data is loaded
+    fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <img src="${item['Product Url']}" alt="${item['Alt Text']}">
+            <h4>${item['Product Name']}</h4>
+          `;
+          productGrid.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Failed to load products:', error);
+        productGrid.innerHTML = '<p style="color: red;">Unable to load products.</p>';
+      })
+      .finally(() => {
+        loader.style.display = 'none'; // hide the spinner
+      });
   });
 </script>
 
