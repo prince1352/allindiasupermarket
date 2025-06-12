@@ -103,9 +103,9 @@ html, body {
   left: 0;
   width: 100%;
   height: 130px; /* match or exceed header height */
-  background-color: transparent; /* fully transparent */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(245, 237, 224, 0.2); /* same as .landing-overlay */
   z-index: 500;
   pointer-events: none;
 }
