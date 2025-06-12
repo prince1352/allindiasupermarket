@@ -330,15 +330,6 @@ html, body {
   width: 100vw;
 }
 
-.categories-scroll-wrapper {
-  flex: 1;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
-}
-
 /* Main Section Background */
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
