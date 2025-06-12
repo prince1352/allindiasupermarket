@@ -186,10 +186,11 @@ html, body {
 .brand-showcase {
   margin-top: 60px;
   padding: 30px 20px;
-  background-color: rgba(21, 64, 54, 0.85); /* var(--green) with 85% opacity */
-  backdrop-filter: blur(8px);
+  background: rgba(21, 64, 54, 0.3); /* --green @ 30% opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -228,12 +229,13 @@ html, body {
   width: 100%;
   opacity: 0.85;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
 }
 
 .brand-logos picture img:hover {
   transform: scale(1.1);
   opacity: 1;
-  filter: brightness(1.1);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 /* --------------------------------
