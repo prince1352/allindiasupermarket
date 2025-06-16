@@ -380,14 +380,16 @@ featured-products-subtitle {
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   padding: 24px;
   text-align: center;
+  justify-content: space-between;
 }
 
 .product-card.large img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
   margin-bottom: 16px;
   object-fit: contain;
+  flex-shrink: 1;
+  max-height: 410px;
 }
 
 .product-card.large h4 {
@@ -429,7 +431,7 @@ featured-products-subtitle {
 .product-card.small,
 .product-card.large {
   position: relative;
-  max-height: 510px; 
+  max-height: 500px; 
   overflow: hidden;
   background: #fff;
   border-radius: 12px;
