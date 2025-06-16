@@ -242,7 +242,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  gap: 50px;
   flex-wrap: wrap;
   text-align: center;
   border-bottom: 0.7px solid var(--green);
@@ -254,7 +254,7 @@ html, body {
 
 .product-brand-strip h3 {
   color: var(--green);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
   flex: 0 0 auto;
