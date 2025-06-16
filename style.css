@@ -627,3 +627,105 @@ html, body {
   display: block;
 }
 
+/* ---------------------------
+        Reviews Section
+------------------------------*/
+
+.reviews-section {
+  background-color: var(--green);
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.reviews-swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.swiper-slide {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-card {
+  background-color: var(--green); /* Match section background */
+  padding: 10px 24px;
+  height: 100%; /* Or keep as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.review-stars {
+  color: var(--sand);
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  text-align: center;
+
+}
+
+.review-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: white;
+  text-align: center;
+  width: 80%;
+
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--sand);
+  text-align: center;
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--sand);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--sand);
+  font-size: 24px;
+}
+
+.swiper-button-prev {
+  left: 0; /* Position just outside the card */
+}
+
+.swiper-button-next {
+  right: 0; /* Position just outside the card */
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent);
+  background: rgba(0, 0, 0, 0.25);
+}
+
