@@ -228,44 +228,80 @@ html, body {
   margin-top: 10px;
 }
 
-.products-swiper {
+/* Swiper Container */
+.featured-swiper {
   padding: 40px 0;
   overflow: visible;
+  position: relative;
 }
 
-.swiper-slide.product-slide-card {
+.featured-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.featured-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product Card Styling */
+.product-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 300px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 24px;
-  max-width: 320px;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
-.swiper-slide.product-slide-card:hover {
-  transform: translateY(-10px);
+.product-card:hover {
+  transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.product-slide-card img {
+.product-card img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 16px;
+  height: auto;
 }
 
-.product-slide-card h4 {
+.product-card h4 {
   font-size: 1.1rem;
   color: var(--green);
   font-weight: 500;
 }
 
+/* Swiper Pagination */
+.swiper-pagination {
+  margin-top: 30px;
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--green);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--coral);
+  opacity: 1;
+}
+
+/* View All Products Button */
 .featured-products-footer {
   margin-top: 40px;
 }
@@ -285,26 +321,6 @@ html, body {
   background-color: transparent;
   color: var(--coral);
   border: 2px solid var(--coral);
-}
-
-/* Swiper specific tweaks */
-.swiper-wrapper {
-  align-items: stretch;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--coral);
-}
-
-.swiper-pagination-bullet {
-  background-color: var(--green);
-  opacity: 0.4;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--coral);
-  opacity: 1;
 }
 
 /* Loader */
@@ -328,6 +344,13 @@ html, body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* AOS animation fix inside Swiper */
+#products [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto;
 }
 
 /* --------------------------------
