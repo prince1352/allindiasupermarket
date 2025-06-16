@@ -1036,3 +1036,93 @@ featured-products-subtitle {
   margin: 10px 10%;
 }
 
+
+/* ----------------------------------------------
+              Footer Section
+------------------------------------------------*/
+
+
+.site-footer {
+  background-color: var(--green);
+  color: #fff;
+  padding: 60px 8% 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-brand img {
+  max-height: 60px;
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.footer-nav h4,
+.footer-contact h4,
+.footer-social h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--coral);
+}
+
+.footer-contact p,
+.footer-contact a {
+  margin-bottom: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: var(--coral);
+}
+
+.footer-social .social-icons a {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-right: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: var(--coral);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #eee;
+}
+
+
