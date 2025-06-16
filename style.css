@@ -120,6 +120,19 @@ html, body {
   transform: scale(1.05);
 }
 
+.nav-left i,
+.nav-right i {
+  color: var(--green);
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-left a:hover i,
+.nav-right a:hover i {
+  transform: scale(1.1);
+}
+
 .nav-underline {
   margin-top: 12px;
   height: 1px;
