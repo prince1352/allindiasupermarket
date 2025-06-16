@@ -68,7 +68,7 @@ html, body {
   transform: translateY(-50%) translateX(-175px);
   display: flex;
   list-style: none;
-  gap: 120px;
+  gap: 100px;
 }
 
 .nav-right {
@@ -78,7 +78,7 @@ html, body {
   transform: translateY(-50%) translateX(175px);
   display: flex;
   list-style: none;
-  gap: 120px;
+  gap: 100px;
 }
 
 .nav-left li a,
