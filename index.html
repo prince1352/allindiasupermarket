@@ -324,26 +324,23 @@
   <script>
     AOS.init();
 
-    fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
-      .then(res => res.json())
-      .then(data => {
-        const productGrid = document.getElementById('productGrid');
-        const loader = document.getElementById('productLoading');
-        data.forEach(item => {
-          const card = document.createElement('div');
-          card.className = 'product-card';
-          card.innerHTML = `
-            <img src="${item['Product URL']}" alt="${item['Alt Text']}">
-            <h4>${item['Product Name']}</h4>
-          `;
-          productGrid.appendChild(card);
-        });
-        loader.style.display = 'none';
-        AOS.refresh();
-      })
-      .catch(error => {
-        document.getElementById('productGrid').innerHTML = '<p style="color: red;">Unable to load products.</p>';
+fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+    .then(res => res.json())
+    .then(data => {
+      const productGrid = document.getElementById('productGrid');
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${item['Product URL']}" alt="${item['Alt Text']}">
+          <h4>${item['Product Name']}</h4>
+        `;
+        productGrid.appendChild(card);
       });
+    })
+    .catch(error => {
+      document.getElementById('productGrid').innerHTML = '<p style="color: red;">Unable to load products.</p>';
+    });
 
     document.querySelectorAll('.category-card').forEach(card => {
       card.addEventListener('click', function () {
