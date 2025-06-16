@@ -64,9 +64,9 @@ html, body {
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 120px;
   list-style: none;
-  flex: 1;
+  gap: 120px; /* adjust spacing as needed */
+  flex: 0 0 auto; /* prevents stretching */
 }
 
 .nav-left li a,
