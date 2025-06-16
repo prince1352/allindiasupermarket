@@ -392,6 +392,31 @@ featured-products-subtitle {
   z-index: 2; /* Keep text above overlay */
 }
 
+.featured-products-button-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.featured-products-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--coral);
+  color: var(--sand);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--coral);
+}
+
+.featured-products-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+
+
 /* --------------------------------
         Product Categories Slide 
 ----------------------------------*/
@@ -682,6 +707,7 @@ featured-products-subtitle {
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.3s ease;
+  border: 2px solid var(--coral);
 }
 
 .wholesale-button:hover {
@@ -734,7 +760,7 @@ featured-products-subtitle {
 }
 
 .review-stars {
-  color: var(--coral);
+  color: var(--sand);
   font-size: 1.5rem;
   margin-bottom: 14px;
   text-align: center;
