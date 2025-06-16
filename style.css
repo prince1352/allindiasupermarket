@@ -206,12 +206,14 @@ html, body {
 ----------------------------------*/
 
 .featured-products-section {
-  padding: 120px 5% 80px;
   background-color: var(--sand);
+  padding: 100px 5% 80px;
   text-align: center;
+  position: relative;
   overflow: hidden;
 }
 
+/* Header */
 .featured-products-header {
   margin-bottom: 40px;
 }
@@ -228,129 +230,108 @@ html, body {
   margin-top: 10px;
 }
 
-/* Swiper Container */
-.featured-swiper {
-  padding: 40px 0;
-  overflow: visible;
-  position: relative;
+/* Navigation Arrows */
+.nav-arrow {
+  font-size: 2.5rem;
+  color: var(--coral);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  padding: 10px;
 }
 
-.featured-swiper .swiper-wrapper {
-  align-items: stretch;
+.nav-arrow:hover {
+  transform: scale(1.2);
 }
 
-.featured-swiper .swiper-slide {
+.featured-navigation {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-/* Product Card Styling */
-.product-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  height: auto;
-}
-
-.product-card h4 {
-  font-size: 1.1rem;
-  color: var(--green);
-  font-weight: 500;
-}
-
-/* Swiper Pagination */
-.swiper-pagination {
-  margin-top: 30px;
-  position: static;
-  display: flex;
   justify-content: center;
-  gap: 8px;
-}
-
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--green);
-  opacity: 0.3;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--coral);
-  opacity: 1;
-}
-
-/* View All Products Button */
-.featured-products-footer {
+  gap: 40px;
   margin-top: 40px;
 }
 
-.featured-more-button {
-  padding: 12px 28px;
-  background-color: var(--coral);
-  color: var(--sand);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
+/* Product Display Layout */
+.featured-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Main Product Card */
+#mainProduct .product-card.large {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  max-width: 600px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
-.featured-more-button:hover {
-  background-color: transparent;
-  color: var(--coral);
-  border: 2px solid var(--coral);
+#mainProduct .product-card.large img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-/* Loader */
-.product-loading {
+#mainProduct .product-card.large h4 {
+  font-size: 1.4rem;
+  color: var(--green);
+}
+
+/* Side Product Cards */
+#sideProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#sideProducts .product-card.small {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 240px;
+  transition: all 0.3s ease;
+}
+
+#sideProducts .product-card.small img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#sideProducts .product-card.small h5 {
+  font-size: 1rem;
+  color: var(--green);
+}
+
+/* Progress Indicators */
+.progress-indicator {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 200px;
+  gap: 10px;
+  margin-top: 30px;
 }
 
-.spinner {
-  width: 48px;
-  height: 48px;
-  border: 6px solid rgba(0, 0, 0, 0.1);
-  border-top-color: var(--coral);
+.progress-indicator span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #ccc;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  transition: background 0.3s ease;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* AOS animation fix inside Swiper */
-#products [data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
-  pointer-events: auto;
+.progress-indicator span.active {
+  background: var(--coral);
 }
 
 /* --------------------------------
