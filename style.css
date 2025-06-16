@@ -43,8 +43,7 @@ html, body {
 
 .main-header.scrolled {
   background-color: var(--sand);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 1s ease;
 }
 
 .nav-wrapper {
