@@ -354,7 +354,7 @@
 
   const mainContainer = document.getElementById('mainProduct');
   const sideContainer = document.getElementById('sideProducts');
-  const progressDots = document.querySelectorAll('.progress-dot');
+  const indicators = document.querySelectorAll('.line-segment');
   const prevArrow = document.getElementById('prevArrow');
   const nextArrow = document.getElementById('nextArrow');
 
@@ -366,7 +366,7 @@
     // Render main product
     if (main) {
       mainContainer.innerHTML = `
-        <div class="product-card large" data-aos="fade-right">
+        <div class="product-card large">
           <img src="${main['Product URL']}" alt="${main['Alt Text']}">
           <h4>${main['Product Name']}</h4>
         </div>
@@ -378,7 +378,6 @@
     side.forEach(p => {
       const card = document.createElement('div');
       card.className = 'product-card small';
-      card.setAttribute('data-aos', 'fade-left');
       card.innerHTML = `
         <img src="${p['Product URL']}" alt="${p['Alt Text']}">
         <h5>${p['Product Name']}</h5>
@@ -387,9 +386,9 @@
     });
 
     // Update progress bar
-    progressDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentSlide);
-    });
+   indicators.forEach((el, idx) => {
+  el.classList.toggle('active', idx === currentSlide);
+});
 
     AOS.refresh(); // Refresh animations after DOM update
   }
