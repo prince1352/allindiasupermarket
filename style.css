@@ -671,7 +671,7 @@ html, body {
 }
 
 .review-stars {
-  color: var(--sand);
+  color: var(--coral);
   font-size: 1.5rem;
   margin-bottom: 14px;
   text-align: center;
@@ -691,14 +691,14 @@ html, body {
 .review-author {
   font-weight: 600;
   font-size: 1rem;
-  color: var(--sand);
+  color: var(--coral);
   text-align: center;
 
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--sand);
+  color: var(--coral);
   font-size: 2rem;
   background: none;
   border: none;
@@ -711,7 +711,7 @@ html, body {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: var(--sand);
+  color: var(--coral);
   font-size: 24px;
 }
 
