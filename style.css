@@ -91,6 +91,7 @@ html, body {
   font-size: 1.1rem;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
 .nav-left li a:hover,
