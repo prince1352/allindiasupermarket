@@ -58,25 +58,27 @@
   </section>
 
   <!-- Featured Products Section -->
-  <section class="product-slide" id="products">
-  <div class="product-section">
-    <div class="product-header" data-aos="fade-down">
-      <h2 class="product-title">Featured Products</h2>
-      <p class="product-subtitle">A curated selection of our most popular and seasonal grocery items</p>
-    </div>
+ <section class="featured-products-section" id="products">
+  <!-- Section Header -->
+  <div class="featured-products-header" data-aos="fade-down">
+    <h2 class="featured-products-title">Featured Products</h2>
+    <p class="featured-products-subtitle">
+      A curated selection of our most popular and seasonal grocery items
+    </p>
+  </div>
 
-    <div class="swiper featured-swiper" data-aos="fade-up">
-      <div class="swiper-wrapper" id="productGrid">
-        <!-- Dynamic product cards will be injected here -->
-      </div>
-      <div class="swiper-pagination"></div>
+  <div class="swiper products-swiper">
+    <div class="swiper-wrapper" id="productGrid">
+      <!-- Product slides injected by JavaScript -->
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <div class="product-footer" data-aos="fade-up" data-aos-delay="200">
-      <a href="#" class="product-more-button">View All Products</a>
-    </div>
+  <div class="featured-products-footer" data-aos="fade-up" data-aos-delay="200">
+    <a href="#" class="featured-more-button">View All Products</a>
   </div>
 </section>
+
 
   <!-- Product Categories Section -->
   <section class="product-categories-slide" id="categories">
@@ -326,31 +328,30 @@
 
   <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-  AOS.init();
+  AOS.init(); // Initialize animations
 
-  // Initialize Swiper *after* content is loaded
-  let swiper;
-
+  // Fetch featured products and initialize Swiper
   fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
     .then(res => res.json())
     .then(data => {
-      const swiperWrapper = document.querySelector('.featured-swiper .swiper-wrapper');
+      const productGrid = document.getElementById('productGrid');
 
       data.forEach(item => {
         const slide = document.createElement('div');
-        slide.className = 'swiper-slide';
+        slide.className = 'swiper-slide product-slide-card';
         slide.innerHTML = `
           <div class="product-card">
             <img src="${item['Product URL']}" alt="${item['Alt Text']}">
             <h4>${item['Product Name']}</h4>
           </div>
         `;
-        swiperWrapper.appendChild(slide);
+        productGrid.appendChild(slide);
       });
 
-      // Now safely initialize Swiper
-      swiper = new Swiper('.featured-swiper', {
+      // Initialize Swiper after content is loaded
+      new Swiper('.products-swiper', {
         slidesPerView: 1.2,
         spaceBetween: 20,
         centeredSlides: true,
@@ -366,13 +367,15 @@
         }
       });
 
-      AOS.refresh(); // If needed after DOM updates
+      AOS.refresh(); // Refresh animations after DOM changes
     })
     .catch(err => {
       console.error('Failed to load featured products:', err);
+      document.getElementById('productGrid').innerHTML =
+        '<p style="color:red;">Unable to load products.</p>';
     });
 
-  // Category card flip logic
+  // Flip effect for category cards
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function () {
       document.querySelectorAll('.category-card').forEach(c => {
