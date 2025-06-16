@@ -1288,13 +1288,7 @@ featured-products-subtitle {
   text-decoration: none;
 }
 
-.allindia-social-link a {
-  margin-bottom: 0px;
-  margin-top: 14px;
-  text-decoration: none;
-}
-
-.allindia-contact-us-social .social-link {
+.allindia-contact-us-social-link .allindia-social-link {
   display: flex;
   align-items: center;
   gap: 10px; /* space between icon and text */
@@ -1302,7 +1296,7 @@ featured-products-subtitle {
   text-decoration: none;
 }
 
-.allindia-contact-us-social i {
+.allindia-contact-us-social-link i {
   color: var(--green); /* make icons black */
   font-size: 1.2rem;
 }
