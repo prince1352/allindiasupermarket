@@ -1268,6 +1268,7 @@ featured-products-subtitle {
 .allindia-contact-us-details h3,
 .allindia-contact-us-social h3 {
   color: var(--coral);
+   margin-bottom: 14px;
 }
 
 .allindia-contact-us-section a {
@@ -1275,16 +1276,21 @@ featured-products-subtitle {
   text-decoration: none;
 }
 
-.allindia-allindia-link strong {
+.brotherschoice-link strong {
   color: var(--coral) !important;
   font-weight: bold;
   text-decoration: none;
 }
 
-.allindia-contact-us-details p,
-.allindia-contact-us-social p {
+.allindia-contact-us-details p {
   margin-bottom: 0px;
   margin-top: 14px;
+  text-decoration: none;
+}
+
+.allindia-contact-us-social p {
+  margin-bottom: 14px;
+  margin-top: 0px;
   text-decoration: none;
 }
 
