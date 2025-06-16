@@ -543,7 +543,7 @@ featured-products-subtitle {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 60px 8% 60px;
+  padding: 80px 8% 20px;
   color: #fff;
   overflow: hidden;
   width: 100%;
