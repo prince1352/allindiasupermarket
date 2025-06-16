@@ -402,7 +402,7 @@ featured-products-subtitle {
   padding: 14px 32px;
   background-color: var(--coral);
   color: var(--sand);
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   border-radius: 8px;
   font-size: 1rem;
