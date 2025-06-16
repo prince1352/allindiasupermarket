@@ -252,6 +252,12 @@ html, body {
   font-weight: 500;
   margin: 0;
   flex: 0 0 auto;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.product-brand-strip h3:hover {
+  transform: scale(1.1);
 }
 
 .product-brand-logos {
