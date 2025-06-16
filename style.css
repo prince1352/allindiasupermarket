@@ -64,7 +64,7 @@ html, body {
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 40px;
+  gap: 120px;
   list-style: none;
   flex: 1;
 }
