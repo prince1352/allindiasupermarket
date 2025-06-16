@@ -56,15 +56,17 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 120px;
   position: relative;
+  width: 100%;
+  padding: 0 40px;
 }
 
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 120px;
+  gap: 40px;
   list-style: none;
+  flex: 1;
 }
 
 .nav-left li a,
@@ -76,6 +78,13 @@ html, body {
   transition: color var(--transition-speed);
   font-size: 1.2rem;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .logo img {
