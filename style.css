@@ -205,133 +205,115 @@ html, body {
         Featured Product Slide 
 ----------------------------------*/
 
-.featured-products-section {
+.custom-featured-section {
+  padding: 100px 5%;
   background-color: var(--sand);
-  padding: 100px 5% 80px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-/* Header */
-.featured-products-header {
+.custom-featured-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
   margin-bottom: 40px;
 }
 
-.featured-products-title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: var(--green);
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
 }
 
-.featured-products-subtitle {
-  font-size: 1.25rem;
-  color: #555;
-  margin-top: 10px;
+.progress-dot.active {
+  background-color: var(--coral);
 }
 
-/* Navigation Arrows */
+/* Featured Slider Layout */
+.featured-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .nav-arrow {
-  font-size: 2.5rem;
-  color: var(--coral);
+  font-size: 2rem;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.3s ease;
+  color: var(--coral);
   padding: 10px;
+  transition: transform 0.2s ease;
 }
 
 .nav-arrow:hover {
   transform: scale(1.2);
 }
 
-.featured-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+/* Main Product */
+.main-product {
+  flex: 1 1 500px;
+  max-width: 500px;
 }
 
-/* Product Display Layout */
-.featured-display {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  margin-top: 60px;
-}
-
-/* Main Product Card */
-#mainProduct .product-card.large {
+.product-card.large {
   background: #fff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 24px;
+  text-align: center;
+}
+
+.product-card.large img {
   width: 100%;
-  max-width: 600px;
-  transition: all 0.3s ease;
-}
-
-#mainProduct .product-card.large img {
-  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-#mainProduct .product-card.large h4 {
-  font-size: 1.4rem;
+.product-card.large h4 {
   color: var(--green);
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
-/* Side Product Cards */
-#sideProducts {
+/* Side Products */
+.side-products {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex: 0 1 220px;
 }
 
-#sideProducts .product-card.small {
+.product-card.small {
   background: #fff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  max-width: 240px;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-#sideProducts .product-card.small img {
+.product-card.small img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 10px;
 }
 
-#sideProducts .product-card.small h5 {
+.product-card.small h5 {
   font-size: 1rem;
   color: var(--green);
-}
-
-/* Progress Indicators */
-.progress-indicator {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
-}
-
-.progress-indicator span {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: #ccc;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.progress-indicator span.active {
-  background: var(--coral);
 }
 
 /* --------------------------------
