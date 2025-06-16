@@ -325,30 +325,18 @@
 </section>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    
-    const swiper = new Swiper('.featured-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 20,
-    centeredSlides: true,
-    grabCursor: true,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2.2 },
-      1024: { slidesPerView: 3.2 }
-    }
-  });
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Initialize Swiper *after* content is loaded
+  let swiper;
 
   fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
     .then(res => res.json())
     .then(data => {
-      const productGrid = document.getElementById('productGrid');
+      const swiperWrapper = document.querySelector('.featured-swiper .swiper-wrapper');
+
       data.forEach(item => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
@@ -358,20 +346,42 @@
             <h4>${item['Product Name']}</h4>
           </div>
         `;
-        productGrid.appendChild(slide);
+        swiperWrapper.appendChild(slide);
       });
-      swiper.update();
+
+      // Now safely initialize Swiper
+      swiper = new Swiper('.featured-swiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 3.2 }
+        }
+      });
+
+      AOS.refresh(); // If needed after DOM updates
+    })
+    .catch(err => {
+      console.error('Failed to load featured products:', err);
     });
 
-    document.querySelectorAll('.category-card').forEach(card => {
-      card.addEventListener('click', function () {
-        document.querySelectorAll('.category-card').forEach(c => {
-          if (c !== this) c.classList.remove('flipped');
-        });
-        this.classList.toggle('flipped');
+  // Category card flip logic
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('click', function () {
+      document.querySelectorAll('.category-card').forEach(c => {
+        if (c !== this) c.classList.remove('flipped');
       });
+      this.classList.toggle('flipped');
     });
-  </script>
+  });
+</script>
 
   <!--  Script Reviews Section -->
   
