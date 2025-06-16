@@ -53,20 +53,28 @@ html, body {
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  width: 100%;
-  padding: 0 40px;
+  height: 80px; /* Adjust as needed */
 }
 
-.nav-left,
-.nav-right {
+.nav-left {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(calc(-120px - 100%), -50%);
   display: flex;
   list-style: none;
-  gap: 120px; /* adjust spacing as needed */
-  flex: 0 0 auto; /* prevents stretching */
+  gap: 120px;
+}
+
+.nav-right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(120px, -50%);
+  display: flex;
+  list-style: none;
+  gap: 120px;
 }
 
 .nav-left li a,
@@ -83,9 +91,14 @@ html, body {
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  margin: 10px 80px;}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .logo img {
   height: 60px;
