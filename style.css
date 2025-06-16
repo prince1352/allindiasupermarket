@@ -545,7 +545,7 @@ featured-products-subtitle {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 80px 8% 20px;
+  padding: 80px 8% 60px;
   color: #fff;
   overflow: hidden;
   width: 100%;
@@ -662,7 +662,6 @@ featured-products-subtitle {
   padding: 0 10px;
 }
 
-/* Explore All Brands Button */
 .categories-button {
   display: inline-block;
   padding: 14px 32px;
@@ -1045,84 +1044,62 @@ featured-products-subtitle {
 .site-footer {
   background-color: var(--green);
   color: #fff;
-  padding: 60px 8% 20px;
-  font-size: 0.95rem;
+  padding: 60px 8% 30px;
+  text-align: center;
 }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-  margin-bottom: 30px;
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.footer-brand img {
-  max-height: 60px;
-  margin-bottom: 16px;
+.footer-logo-wrap {
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer-brand p {
-  max-width: 300px;
-  line-height: 1.6;
+.footer-logo-wrap img {
+  height: 50px;
+  display: block;
 }
 
-.footer-nav h4,
-.footer-contact h4,
-.footer-social h4 {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  color: #fff;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-nav li {
-  margin-bottom: 10px;
-}
-
-.footer-nav a {
+.footer-links a {
   color: #fff;
   text-decoration: none;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 
-.footer-nav a:hover {
+.footer-links a:hover {
   color: var(--coral);
 }
 
-.footer-contact p,
-.footer-contact a {
-  margin-bottom: 8px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
-  color: var(--coral);
-}
-
-.footer-social .social-icons a {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-right: 16px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-social .social-icons a:hover {
-  color: var(--coral);
-  transform: scale(1.1);
+.footer-tagline p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 300;
 }
 
 .footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 16px;
   font-size: 0.85rem;
-  color: #eee;
+  opacity: 0.8;
 }
+
 
 
