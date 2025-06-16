@@ -1168,7 +1168,7 @@ featured-products-subtitle {
                  Contact Page  
 ------------------------------------------------*/
 .allindia-contact-us-section {
-  padding: 140px 10%;
+  padding: 140px 10% 80px;
   background-color: var(--sand);
 }
 
@@ -1208,7 +1208,7 @@ featured-products-subtitle {
 .allindia-contact-us-form textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -1268,7 +1268,6 @@ featured-products-subtitle {
 .allindia-contact-us-details h3,
 .allindia-contact-us-social h3 {
   color: var(--coral);
-   margin-bottom: 14px;
 }
 
 .allindia-contact-us-section a {
