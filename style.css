@@ -292,9 +292,14 @@ html, body {
 ----------------------------------*/
 
 .custom-featured-section {
-  padding: 100px 5%;
   background-color: var(--sand);
   text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .custom-featured-wrapper {
