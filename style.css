@@ -226,6 +226,58 @@ html, body {
   border: 2px solid var(--coral);
 }
 
+/* ----------------------------------
+          Brand Logo Bar 
+-------------------------------------*/
+
+.product-brand-strip {
+  background-color: var(--sand);
+  padding: 40px 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.product-brand-strip > * {
+  flex-shrink: 0;
+}
+
+.product-brand-strip h3 {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.product-brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-brand-logos img {
+  height: 48px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.product-brand-logos img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* Ensure full width always */
+.product-categories-section,
+.product-brand-strip {
+  max-width: none !important;
+  width: 100% !important;
+}
 
 /* --------------------------------
         Featured Product Slide 
@@ -618,60 +670,6 @@ featured-products-subtitle {
   background-color: transparent;
   color: var(--coral);
   border: 2px solid var(--coral);
-}
-
-/* Brand Logo Bar */
-.product-brand-strip {
-  background-color: var(--sand);
-  padding: 20px 2%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid var(--green);
-  gap: 60px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.product-brand-strip > * {
-  flex-shrink: 0;
-}
-
-.product-brand-strip h3 {
-  color: var(--green);
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
-  flex: 0 0 auto;
-}
-
-.product-brand-logos {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  flex: 1;
-  justify-content: flex-start;
-}
-
-.product-brand-logos img {
-  height: 48px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.product-brand-logos img:hover {
-  filter: none;
-  transform: scale(1.1);
-}
-
-/* Ensure full width always */
-.product-categories-section,
-.product-brand-strip {
-  max-width: none !important;
-  width: 100% !important;
 }
 
 /* --------------------------------
