@@ -387,6 +387,7 @@ featured-products-subtitle {
   height: auto;
   border-radius: 10px;
   margin-bottom: 16px;
+  object-fit: contain;
 }
 
 .product-card.large h4 {
