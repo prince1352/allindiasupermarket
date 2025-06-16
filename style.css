@@ -61,7 +61,7 @@ html, body {
   position: absolute;
   right: 50%;
   top: 50%;
-  transform: translate(calc(-120px - 100%), -50%);
+  transform: translateY(-50%) translateX(-120px);
   display: flex;
   list-style: none;
   gap: 120px;
@@ -71,7 +71,7 @@ html, body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(120px, -50%);
+  transform: translateY(-50%) translateX(120px);
   display: flex;
   list-style: none;
   gap: 120px;
