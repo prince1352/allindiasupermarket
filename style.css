@@ -239,6 +239,7 @@ html, body {
   gap: 80px;
   flex-wrap: wrap;
   text-align: center;
+  border-bottom: 0.7px solid var(--green);
 }
 
 .product-brand-strip > * {
