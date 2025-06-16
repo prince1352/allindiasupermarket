@@ -58,24 +58,23 @@
   </section>
 
   <!-- Featured Products Section -->
-  <section class="featured-products-modern" id="products">
-  <div class="featured-products-container">
-    <div class="featured-products-header" data-aos="fade-down">
-      <h2>Featured Products</h2>
-      <p>A curated showcase of customer favourites and seasonal highlights</p>
+  <section class="product-slide" id="products">
+  <div class="product-section">
+    <div class="product-header" data-aos="fade-down">
+      <h2 class="product-title">Featured Products</h2>
+      <p class="product-subtitle">A curated selection of our most popular and seasonal grocery items</p>
     </div>
 
-    <div class="featured-products-showcase" id="productGrid" data-aos="fade-up">
-      <!-- Injected Product Cards via JS -->
+    <div class="swiper featured-swiper" data-aos="fade-up">
+      <div class="swiper-wrapper" id="productGrid">
+        <!-- Dynamic product cards will be injected here -->
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
-    <div class="featured-products-footer" data-aos="fade-up" data-aos-delay="200">
-      <a href="#" class="featured-products-button">View All Products</a>
+    <div class="product-footer" data-aos="fade-up" data-aos-delay="200">
+      <a href="#" class="product-more-button">View All Products</a>
     </div>
-  </div>
-
-  <div class="product-loading" id="productLoading">
-    <div class="spinner"></div>
   </div>
 </section>
 
@@ -329,27 +328,39 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+    
+    const swiper = new Swiper('.featured-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    centeredSlides: true,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2.2 },
+      1024: { slidesPerView: 3.2 }
+    }
+  });
 
-fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
+  fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
     .then(res => res.json())
     .then(data => {
       const productGrid = document.getElementById('productGrid');
-      const loader = document.getElementById('productLoading');
       data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'product-card-modern';
-        card.innerHTML = `
-          <img src="${item['Product URL']}" alt="${item['Alt Text']}">
-          <h4>${item['Product Name']}</h4>
-          <p>Top-selling item available in-store and wholesale.</p>
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `
+          <div class="product-card">
+            <img src="${item['Product URL']}" alt="${item['Alt Text']}">
+            <h4>${item['Product Name']}</h4>
+          </div>
         `;
-        productGrid.appendChild(card);
+        productGrid.appendChild(slide);
       });
-      loader.style.display = 'none';
-      AOS.refresh();
-    })
-    .catch(error => {
-      document.getElementById('productGrid').innerHTML = '<p style="color: red;">Unable to load products.</p>';
+      swiper.update();
     });
 
     document.querySelectorAll('.category-card').forEach(card => {
