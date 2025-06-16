@@ -88,7 +88,7 @@ html, body {
   font-weight: 300;
   letter-spacing: 1px;
   transition: color var(--transition-speed);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease, transform 0.3s ease;
 }
