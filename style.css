@@ -292,14 +292,6 @@ html, body {
 ----------------------------------*/
 
 .custom-featured-section {
-  background-color: var(--sand);
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-width: 100vw;
   padding: 60px 5%;
   background-color: var(--sand);
   text-align: center;
@@ -550,7 +542,7 @@ featured-products-subtitle {
 .product-categories-section {
   background: url('images/products-background.jpg') no-repeat center center/cover;
   position: relative;
-  padding: 120px 8% 80px;
+  padding: 60px 8% 60px;
   color: #fff;
   overflow: hidden;
   width: 100%;
@@ -576,7 +568,7 @@ featured-products-subtitle {
 /* Title */
 .categories-title {
   font-size: 2.2rem;
-  font-weight: 500;
+  font-weight: bold;
   color: #fff;
   margin-bottom: 50px;
 }
@@ -694,7 +686,7 @@ featured-products-subtitle {
 
 .wholesale-services-section {
   background-color: var(--sand);
-  padding: 120px 8% 100px;
+  padding: 60px 8% 60px;
   text-align: center;
 }
 
@@ -784,7 +776,7 @@ featured-products-subtitle {
 
 .reviews-section {
   background-color: var(--green);
-  padding: 60px 5%;
+  padding: 60px 5% 40px;
   text-align: center;
 }
 
