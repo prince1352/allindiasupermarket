@@ -60,6 +60,13 @@
   <!-- Featured Products Section -->
 <section class="custom-featured-section" id="products">
   <div class="custom-featured-wrapper">
+
+    <!-- Title and Subtitle -->
+    <div class="featured-products-header" data-aos="fade-down">
+      <h2 class="featured-products-title">Featured Products</h2>
+      <p class="featured-products-subtitle">A curated selection of our most popular and seasonal grocery items</p>
+    </div>
+
     <!-- Progress Bar -->
     <div class="progress-bar">
       <div class="progress-dot active"></div>
@@ -67,16 +74,17 @@
       <div class="progress-dot"></div>
     </div>
 
+    <!-- Product Display Area -->
     <div class="featured-slider">
       <!-- Left Arrow -->
       <div class="nav-arrow left-arrow" id="prevArrow">&#10094;</div>
 
-      <!-- Main Product -->
+      <!-- Main Product Card -->
       <div class="main-product" id="mainProduct">
         <!-- Injected dynamically -->
       </div>
 
-      <!-- Right Column with Smaller Products -->
+      <!-- Side Product Cards -->
       <div class="side-products" id="sideProducts">
         <!-- Injected dynamically -->
       </div>
@@ -84,6 +92,7 @@
       <!-- Right Arrow -->
       <div class="nav-arrow right-arrow" id="nextArrow">&#10095;</div>
     </div>
+
   </div>
 </section>
 
@@ -336,37 +345,40 @@
   <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init(); // Init AOS animations
+  AOS.init(); // Initialize animations
 
   const endpoint = 'https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec';
-  const maxSlides = 3;
+  const maxSlides = 3; // 15 products, 5 per slide
   let currentSlide = 0;
   let allProducts = [];
 
-  const updateDisplay = () => {
+  const mainContainer = document.getElementById('mainProduct');
+  const sideContainer = document.getElementById('sideProducts');
+  const progressDots = document.querySelectorAll('.progress-dot');
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+
+  function updateDisplay() {
     const startIndex = currentSlide * 5;
     const main = allProducts[startIndex];
     const side = allProducts.slice(startIndex + 1, startIndex + 5);
 
-    const mainContainer = document.getElementById('mainProduct');
-    const sideContainer = document.getElementById('sideProducts');
-    const indicators = document.querySelectorAll('.progress-indicator span');
-
-    // Main product
+    // Render main product
     if (main) {
       mainContainer.innerHTML = `
-        <div class="product-card large">
+        <div class="product-card large" data-aos="fade-right">
           <img src="${main['Product URL']}" alt="${main['Alt Text']}">
           <h4>${main['Product Name']}</h4>
         </div>
       `;
     }
 
-    // Side products
+    // Render side products
     sideContainer.innerHTML = '';
     side.forEach(p => {
       const card = document.createElement('div');
       card.className = 'product-card small';
+      card.setAttribute('data-aos', 'fade-left');
       card.innerHTML = `
         <img src="${p['Product URL']}" alt="${p['Alt Text']}">
         <h5>${p['Product Name']}</h5>
@@ -374,45 +386,43 @@
       sideContainer.appendChild(card);
     });
 
-    // Progress indicators
-    indicators.forEach((el, idx) => {
-      el.classList.toggle('active', idx === currentSlide);
+    // Update progress bar
+    progressDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
     });
 
-    AOS.refresh();
-  };
+    AOS.refresh(); // Refresh animations after DOM update
+  }
 
-  // Navigation handlers
-  const nextSlide = () => {
+  function nextSlide() {
     if (currentSlide < maxSlides - 1) {
       currentSlide++;
       updateDisplay();
     }
-  };
+  }
 
-  const prevSlide = () => {
+  function prevSlide() {
     if (currentSlide > 0) {
       currentSlide--;
       updateDisplay();
     }
-  };
+  }
 
-  document.getElementById('arrowNext').addEventListener('click', nextSlide);
-  document.getElementById('arrowPrev').addEventListener('click', prevSlide);
+  prevArrow.addEventListener('click', prevSlide);
+  nextArrow.addEventListener('click', nextSlide);
 
-  // Fetch and load products
   fetch(endpoint)
     .then(res => res.json())
     .then(data => {
-      allProducts = data.slice(0, maxSlides * 5); // 15 products max
+      allProducts = data.slice(0, maxSlides * 5); // Get first 15 products
       updateDisplay();
     })
     .catch(err => {
       console.error('Error loading products:', err);
-      document.getElementById('mainProduct').innerHTML = '<p style="color: red;">Failed to load products.</p>';
+      mainContainer.innerHTML = '<p style="color: red;">Failed to load products.</p>';
     });
 
-  // Optional: Flip logic for category cards
+  // Optional: Flip logic for other category cards on page
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function () {
       document.querySelectorAll('.category-card').forEach(c => {
@@ -422,6 +432,7 @@
     });
   });
 </script>
+
 
   <!--  Script Reviews Section -->
   
