@@ -394,19 +394,15 @@
     AOS.refresh(); // Refresh animations after DOM update
   }
 
-  function nextSlide() {
-    if (currentSlide < maxSlides - 1) {
-      currentSlide++;
-      updateDisplay();
-    }
-  }
+ function nextSlide() {
+  currentSlide = (currentSlide + 1) % maxSlides;
+  updateDisplay();
+}
 
-  function prevSlide() {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateDisplay();
-    }
-  }
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + maxSlides) % maxSlides;
+  updateDisplay();
+}
 
   prevArrow.addEventListener('click', prevSlide);
   nextArrow.addEventListener('click', nextSlide);
