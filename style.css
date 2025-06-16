@@ -300,6 +300,9 @@ html, body {
   flex-direction: column;
   overflow: hidden;
   width: 100vw;
+  padding: 60px 5%;
+  background-color: var(--sand);
+  text-align: center;
 }
 
 .custom-featured-wrapper {
