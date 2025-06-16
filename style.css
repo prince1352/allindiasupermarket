@@ -238,7 +238,7 @@ html, body {
 
 .product-brand-strip {
   background-color: var(--sand);
-  padding: 40px 2%;
+  padding: 30px 2%;
   display: flex;
   justify-content: center;
   align-items: center;
