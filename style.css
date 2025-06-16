@@ -295,11 +295,11 @@ html, body {
   background-color: var(--sand);
   text-align: center;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 100vw;
+  min-width: 100vw;
   padding: 60px 5%;
   background-color: var(--sand);
   text-align: center;
