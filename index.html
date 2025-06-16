@@ -58,27 +58,34 @@
   </section>
 
   <!-- Featured Products Section -->
- <section class="featured-products-section" id="products">
-  <!-- Section Header -->
-  <div class="featured-products-header" data-aos="fade-down">
-    <h2 class="featured-products-title">Featured Products</h2>
-    <p class="featured-products-subtitle">
-      A curated selection of our most popular and seasonal grocery items
-    </p>
-  </div>
-
-  <div class="swiper products-swiper">
-    <div class="swiper-wrapper" id="productGrid">
-      <!-- Product slides injected by JavaScript -->
+<section class="custom-featured-section" id="products">
+  <div class="custom-featured-wrapper">
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-dot active"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
 
-  <div class="featured-products-footer" data-aos="fade-up" data-aos-delay="200">
-    <a href="#" class="featured-more-button">View All Products</a>
+    <div class="featured-slider">
+      <!-- Left Arrow -->
+      <div class="nav-arrow left-arrow" id="prevArrow">&#10094;</div>
+
+      <!-- Main Product -->
+      <div class="main-product" id="mainProduct">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Right Column with Smaller Products -->
+      <div class="side-products" id="sideProducts">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Right Arrow -->
+      <div class="nav-arrow right-arrow" id="nextArrow">&#10095;</div>
+    </div>
   </div>
 </section>
-
 
   <!-- Product Categories Section -->
   <section class="product-categories-slide" id="categories">
@@ -328,54 +335,84 @@
 
   <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
 <script>
-  AOS.init(); // Initialize animations
+  AOS.init(); // Init AOS animations
 
-  // Fetch featured products and initialize Swiper
-  fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec')
-    .then(res => res.json())
-    .then(data => {
-      const productGrid = document.getElementById('productGrid');
+  const endpoint = 'https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec';
+  const maxSlides = 3;
+  let currentSlide = 0;
+  let allProducts = [];
 
-      data.forEach(item => {
-        const slide = document.createElement('div');
-        slide.className = 'swiper-slide product-slide-card';
-        slide.innerHTML = `
-          <div class="product-card">
-            <img src="${item['Product URL']}" alt="${item['Alt Text']}">
-            <h4>${item['Product Name']}</h4>
-          </div>
-        `;
-        productGrid.appendChild(slide);
-      });
+  const updateDisplay = () => {
+    const startIndex = currentSlide * 5;
+    const main = allProducts[startIndex];
+    const side = allProducts.slice(startIndex + 1, startIndex + 5);
 
-      // Initialize Swiper after content is loaded
-      new Swiper('.products-swiper', {
-        slidesPerView: 1.2,
-        spaceBetween: 20,
-        centeredSlides: true,
-        grabCursor: true,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          768: { slidesPerView: 2.2 },
-          1024: { slidesPerView: 3.2 }
-        }
-      });
+    const mainContainer = document.getElementById('mainProduct');
+    const sideContainer = document.getElementById('sideProducts');
+    const indicators = document.querySelectorAll('.progress-indicator span');
 
-      AOS.refresh(); // Refresh animations after DOM changes
-    })
-    .catch(err => {
-      console.error('Failed to load featured products:', err);
-      document.getElementById('productGrid').innerHTML =
-        '<p style="color:red;">Unable to load products.</p>';
+    // Main product
+    if (main) {
+      mainContainer.innerHTML = `
+        <div class="product-card large">
+          <img src="${main['Product URL']}" alt="${main['Alt Text']}">
+          <h4>${main['Product Name']}</h4>
+        </div>
+      `;
+    }
+
+    // Side products
+    sideContainer.innerHTML = '';
+    side.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'product-card small';
+      card.innerHTML = `
+        <img src="${p['Product URL']}" alt="${p['Alt Text']}">
+        <h5>${p['Product Name']}</h5>
+      `;
+      sideContainer.appendChild(card);
     });
 
-  // Flip effect for category cards
+    // Progress indicators
+    indicators.forEach((el, idx) => {
+      el.classList.toggle('active', idx === currentSlide);
+    });
+
+    AOS.refresh();
+  };
+
+  // Navigation handlers
+  const nextSlide = () => {
+    if (currentSlide < maxSlides - 1) {
+      currentSlide++;
+      updateDisplay();
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateDisplay();
+    }
+  };
+
+  document.getElementById('arrowNext').addEventListener('click', nextSlide);
+  document.getElementById('arrowPrev').addEventListener('click', prevSlide);
+
+  // Fetch and load products
+  fetch(endpoint)
+    .then(res => res.json())
+    .then(data => {
+      allProducts = data.slice(0, maxSlides * 5); // 15 products max
+      updateDisplay();
+    })
+    .catch(err => {
+      console.error('Error loading products:', err);
+      document.getElementById('mainProduct').innerHTML = '<p style="color: red;">Failed to load products.</p>';
+    });
+
+  // Optional: Flip logic for category cards
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function () {
       document.querySelectorAll('.category-card').forEach(c => {
