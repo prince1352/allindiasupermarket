@@ -1164,4 +1164,175 @@ featured-products-subtitle {
   border-color: var(--coral);
 }
 
+/* ----------------------------------------------
+                 Contact Page  
+------------------------------------------------*/
+.allindia-contact-us-section {
+  padding: 140px 10%;
+  background-color: var(--sand);
+}
+
+.allindia-contact-us-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.allindia-contact-us-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.allindia-contact-us-subheading {
+  max-width: 700px;
+  margin: 20px auto 10px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #444;
+}
+
+.allindia-contact-us-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.allindia-contact-us-form-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.allindia-contact-us-form input,
+.allindia-contact-us-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 33px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.allindia-contact-us-submit-button {
+  padding: 12px 24px;
+  background-color: var(--coral);
+  color: #f8f8f5;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.allindia-contact-us-submit-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+
+.allindia-contact-us-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.allindia-contact-us-details,
+.allindia-contact-us-social,
+.allindia-contact-us-allindia {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.allindia-contact-us-details p,
+.allindia-contact-us-social p,
+.allindia-contact-us-allindia p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.allindia-contact-us-details p strong,
+.allindia-contact-us-social p strong,
+.allindia-contact-us-allindia p strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.allindia-contact-us-details h3,
+.allindia-contact-us-social h3 {
+  color: var(--coral);
+}
+
+.allindia-contact-us-section a {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.allindia-allindia-link strong {
+  color: var(--coral) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.allindia-contact-us-details p,
+.allindia-contact-us-social p {
+  margin-bottom: 0px;
+  margin-top: 14px;
+  text-decoration: none;
+}
+
+.allindia-contact-us-social .social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  margin-top: 14px;
+  text-decoration: none;
+}
+
+.allindia-contact-us-social i {
+  color: var(--green); /* make icons black */
+  font-size: 1.2rem;
+}
+
+.allindia-store-promo {
+  text-align: center;
+}
+
+.allindia-contact-us-map {
+  margin-top: 0px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+.allindia-contact-us-map-button-wrapper {
+  text-align: center;
+  margin: 24px 0 40px;
+}
+
+.allindia-contact-us-map-button {
+  background-color: var(--coral);
+  color: #f8f8f5;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: 2px solid var(--coral);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.allindia-contact-us-map-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
 
