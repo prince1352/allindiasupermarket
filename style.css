@@ -532,82 +532,98 @@ html, body {
         Whole Sale Section 
 ----------------------------------*/
 
-.wholesale-section {
+.wholesale-modern-section {
   background-color: var(--sand);
-  padding: 120px 4%;
+  padding: 120px 10% 100px;
   text-align: center;
-  align-items: center;
 }
 
-.wholesale-wrapper {
-  max-width: 1200px;
+.wholesale-modern-wrapper {
+  max-width: 1300px;
   margin: 0 auto;
 }
 
-.wholesale-title {
+.wholesale-modern-title {
   font-size: 2.5rem;
   color: var(--green);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.wholesale-subtitle {
+.wholesale-modern-subtitle {
   font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 60px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto 60px;
 }
 
-.wholesale-features {
+.wholesale-cards {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-bottom: 60px;
 }
 
-.wholesale-card {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+.wholesale-photo-card {
+  position: relative;
   flex: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 500px;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.wholesale-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+.wholesale-photo-card:hover {
+  transform: scale(1.02);
 }
 
-.wholesale-card h3 {
+.wholesale-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(21, 64, 54, 0.7); /* semi-transparent dark green */
+  color: var(--sand);
+  padding: 30px 20px;
+  text-align: left;
+}
+
+.wholesale-overlay h3 {
   font-size: 1.4rem;
-  color: var(--green);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-.wholesale-card p {
+.wholesale-overlay p {
   font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-.wholesale-button {
+/* CTA Button */
+.wholesale-modern-button {
   display: inline-block;
+  padding: 14px 32px;
   background-color: var(--coral);
   color: var(--sand);
-  padding: 14px 32px;
-  border-radius: 6px;
+  font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
   border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-.wholesale-button:hover {
+.wholesale-modern-button:hover {
   background-color: transparent;
   color: var(--coral);
   border: 2px solid var(--coral);
+}
+
+.wholesale-photo-card picture,
+.wholesale-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
