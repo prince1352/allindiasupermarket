@@ -729,3 +729,164 @@ html, body {
   background: rgba(0, 0, 0, 0.25);
 }
 
+/* ----------------------------------------------
+              Contact Section
+------------------------------------------------*/
+
+.contact-section {
+  background-color: var(--sand);
+  padding: 60px 10% 10px;
+  border-top: 1px solid #eee;
+}
+
+.contact-container {
+  max-width: 100%;    /* or go larger: try 1600px if needed */
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: var(--coral);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--green);
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 2.2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 140px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.contact-link {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--coral);
+  box-shadow: 0 0 0 2px rgba(208, 28, 65, 0.15);
+  background-color: #f8f8f5;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  align-self: stretch;
+  background-color: var(--green);
+  color: var(--sand);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+#form-confirmation {
+  display: none;
+  margin-top: 20px;
+  color: var(--green);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.map-container {
+  width: 100%;
+  margin: 20px 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.map-button-wrapper {
+  text-align: center;
+  margin: 10px 0 10px;
+}
+
+.map-button {
+  background-color: var(--green);
+  color: var(--sand);
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.map-button:hover {
+  background-color: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.thank-you-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--green);
+  margin: 10px 10%;
+}
+
