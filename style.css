@@ -1282,13 +1282,15 @@ featured-products-subtitle {
   text-decoration: none;
 }
 
-.allindia-contact-us-details p {
+.allindia-contact-us-details p,
+allindia-contact-us-social-link p {
   margin-bottom: 0px;
   margin-top: 14px;
   text-decoration: none;
 }
 
-.allindia-contact-us-social-link .allindia-social-link {
+.allindia-contact-us-social-link,
+.allindia-social-link {
   display: flex;
   align-items: center;
   gap: 10px; /* space between icon and text */
