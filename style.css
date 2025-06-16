@@ -90,6 +90,12 @@ html, body {
   transition: color var(--transition-speed);
   font-size: 1.2rem;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-left li a:hover,
+.nav-right li a:hover {
+  transform: scale(1.1);
 }
 
 .logo {
