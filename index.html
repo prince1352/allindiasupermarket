@@ -59,17 +59,23 @@
 
   <!-- Featured Products Section -->
   <section class="featured-products-modern" id="products">
-  <div class="featured-intro" data-aos="fade-down">
-    <h2>Featured Products</h2>
-    <p>A curated showcase of our most popular and seasonal grocery picks</p>
+  <div class="featured-products-container">
+    <div class="featured-products-header" data-aos="fade-down">
+      <h2>Featured Products</h2>
+      <p>A curated showcase of customer favourites and seasonal highlights</p>
+    </div>
+
+    <div class="featured-products-showcase" id="productGrid" data-aos="fade-up">
+      <!-- Injected Product Cards via JS -->
+    </div>
+
+    <div class="featured-products-footer" data-aos="fade-up" data-aos-delay="200">
+      <a href="#" class="featured-products-button">View All Products</a>
+    </div>
   </div>
 
-  <div class="featured-scroller" id="productGrid">
-    <!-- Products injected via JavaScript -->
-  </div>
-
-  <div class="featured-cta" data-aos="fade-up">
-    <a href="#" class="featured-button">View All Products</a>
+  <div class="product-loading" id="productLoading">
+    <div class="spinner"></div>
   </div>
 </section>
 
@@ -328,15 +334,19 @@ fetch('https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYP
     .then(res => res.json())
     .then(data => {
       const productGrid = document.getElementById('productGrid');
+      const loader = document.getElementById('productLoading');
       data.forEach(item => {
         const card = document.createElement('div');
-        card.className = 'product-card';
+        card.className = 'product-card-modern';
         card.innerHTML = `
           <img src="${item['Product URL']}" alt="${item['Alt Text']}">
           <h4>${item['Product Name']}</h4>
+          <p>Top-selling item available in-store and wholesale.</p>
         `;
         productGrid.appendChild(card);
       });
+      loader.style.display = 'none';
+      AOS.refresh();
     })
     .catch(error => {
       document.getElementById('productGrid').innerHTML = '<p style="color: red;">Unable to load products.</p>';
