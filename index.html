@@ -97,6 +97,10 @@
   <a href="/products.html" class="featured-products-button">Explore Our Full Product Lineup</a>
     </div>
 
+    <div class="featured-loader" id="featuredLoader">
+  <div class="spinner"></div>
+    </div>
+    
   </div>
 </section>
 
@@ -361,6 +365,7 @@
   const indicators = document.querySelectorAll('.line-segment');
   const prevArrow = document.getElementById('prevArrow');
   const nextArrow = document.getElementById('nextArrow');
+  const loader = document.getElementById('featuredLoader');
 
   function updateDisplay() {
     const startIndex = currentSlide * 5;
@@ -411,16 +416,18 @@ function prevSlide() {
   prevArrow.addEventListener('click', prevSlide);
   nextArrow.addEventListener('click', nextSlide);
 
-  fetch(endpoint)
-    .then(res => res.json())
-    .then(data => {
-      allProducts = data.slice(0, maxSlides * 5); // Get first 15 products
-      updateDisplay();
-    })
-    .catch(err => {
-      console.error('Error loading products:', err);
-      mainContainer.innerHTML = '<p style="color: red;">Failed to load products.</p>';
-    });
+fetch(endpoint)
+  .then(res => res.json())
+  .then(data => {
+    allProducts = data.slice(0, maxSlides * 5); // Get first 15 products
+    updateDisplay();
+    loader.style.display = 'none'; // Hide loader once products are ready
+  })
+  .catch(err => {
+    console.error('Error loading products:', err);
+    mainContainer.innerHTML = '<p style="color: red;">Failed to load products.</p>';
+    loader.style.display = 'none'; // Hide loader on error
+  });
 
   // Optional: Flip logic for other category cards on page
   document.querySelectorAll('.category-card').forEach(card => {
