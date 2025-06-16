@@ -1288,8 +1288,9 @@ featured-products-subtitle {
   text-decoration: none;
 }
 
-.allindia-social-link {
-  gap: 14px 0px;
+.allindia-social-link a {
+  margin-bottom: 0px;
+  margin-top: 14px;
   text-decoration: none;
 }
 
