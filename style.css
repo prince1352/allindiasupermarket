@@ -532,48 +532,31 @@ html, body {
         Whole Sale Section 
 ----------------------------------*/
 
-.wholesale-highlight-section {
+.wholesale-services-section {
   background-color: var(--sand);
-  padding: 120px 8%;
+  padding: 120px 8% 100px;
+  text-align: center;
 }
 
-.wholesale-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 60px;
-}
-
-.wholesale-left img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.wholesale-right {
-  flex: 1;
-  max-width: 700px;
-}
-
-.wholesale-right h2 {
-  font-size: 2.8rem;
+.wholesale-intro h2 {
+  font-size: 2.6rem;
   color: var(--green);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.wholesale-right p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 40px;
+.wholesale-intro p {
+  font-size: 1.15rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 60px;
   line-height: 1.6;
 }
 
-.wholesale-cards {
+.wholesale-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
 }
 
 .wholesale-card {
@@ -581,31 +564,40 @@ html, body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  transition: transform 0.3s ease;
 }
 
+.wholesale-card:hover {
+  transform: translateY(-6px);
+}
+
+.wholesale-card picture,
 .wholesale-card img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
-.card-text {
-  padding: 20px;
+.wholesale-card-content {
+  padding: 24px;
+  text-align: left;
 }
 
-.card-text h3 {
-  font-size: 1.25rem;
+.wholesale-card-content h3 {
+  font-size: 1.4rem;
   color: var(--green);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.card-text p {
+.wholesale-card-content p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
+}
+
+.wholesale-cta {
+  margin-top: 50px;
 }
 
 .wholesale-button {
