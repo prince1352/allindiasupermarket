@@ -1436,3 +1436,52 @@ allindia-contact-us-social-link p {
   background-color: transparent;
   color: var(--green);
 }
+
+/* FEATURES GRID SECTION */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 80px 8%;
+  background-color: #ffffff;
+}
+
+/* Individual Feature Card */
+.feature {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+}
+
+/* Image Section */
+.feature-img {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text Section */
+.feature-text {
+  padding: 24px;
+}
+
+.feature-text h3 {
+  font-size: 1.3rem;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.feature-text p {
+  font-size: 1.02rem;
+  color: #333;
+  line-height: 1.6;
+}
+
