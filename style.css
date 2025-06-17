@@ -1457,3 +1457,62 @@ allindia-contact-us-social-link p {
     border-radius: 12px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.1);
   }
+
+.wholesale-specialties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8%;
+  background-color: #f8f8f5;
+}
+
+.specialty-block {
+  position: relative;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.specialty-overlay {
+  background: rgba(0, 70, 50, 0.75); /* --green tone */
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  transition: background 0.3s ease;
+}
+
+.specialty-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.specialty-overlay p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.specialty-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 24px;
+  background-color: var(--coral);
+  color: var(--sand);
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.specialty-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+}
+
+
