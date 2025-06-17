@@ -1341,107 +1341,119 @@ allindia-contact-us-social-link p {
                  Wholesale Page  
 ------------------------------------------------*/
 
- .wholesale-section, .partner-section {
-    padding: 140px 8% 80px;
-    background-color: #f8f8f5;
+.wholesale-section.redesigned {
+    background: #f3f3f0;
+    padding: 100px 6% 60px;
+    text-align: center;
   }
 
-  .wholesale-intro, .partner-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 60px;
+  .wholesale-container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .wholesale-text, .partner-text {
-    flex: 1;
-  }
-
-  .wholesale-text h1, .partner-text h2 {
-    font-size: 2.2rem;
+  .wholesale-header h1 {
+    font-size: 2.4rem;
     color: var(--green);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  .wholesale-text p, .partner-text p {
-    font-size: 1.05rem;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 16px;
+  .wholesale-header .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 60px;
   }
 
-  .wholesale-image, .partner-image {
-    flex: 1;
-    min-width: 300px;
-  }
-
-  .wholesale-image img, .partner-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-
-  .partner-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background-color: var(--coral);
-    color: var(--sand);
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid var(--coral);
-  }
-
-  .partner-button:hover {
-    background-color: transparent;
-    color: var(--coral);
-  }
-
-  .wholesale-cards {
+  .wholesale-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    margin-top: 60px;
   }
 
   .wholesale-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
+    background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    height: 280px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
     transition: transform 0.3s ease;
   }
 
   .wholesale-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
   }
 
-  .card-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 80, 60, 0.7); /* --green shading */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+  .wholesale-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
   }
 
-  .card-overlay h3 {
-    font-size: 1.4rem;
+  .wholesale-content {
+    padding: 24px;
+  }
+
+  .wholesale-content h3 {
+    color: var(--green);
     margin-bottom: 10px;
+    font-size: 1.2rem;
   }
 
-  .card-overlay p {
+  .wholesale-content p {
+    color: #444;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
+  .partner-section.redesigned {
+    background: var(--green);
+    padding: 100px 6%;
+    color: #fff;
+  }
+
+  .partner-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .partner-text {
+    flex: 1 1 400px;
+  }
+
+  .partner-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .partner-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .partner-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 26px;
+    background: var(--sand);
+    color: var(--green);
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .partner-button:hover {
+    background: #fff;
+    color: var(--green);
+  }
+
+  .partner-img {
+    flex: 1 1 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+  }
