@@ -1485,3 +1485,48 @@ allindia-contact-us-social-link p {
   line-height: 1.6;
 }
 
+/* WHY CHOOSE US SECTION */
+.why-choose-us {
+  background-color: #f8f8f5;
+  padding: 80px 8%;
+}
+
+.why-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-content h2 {
+  font-size: 2rem;
+  color: var(--green);
+  margin-bottom: 30px;
+}
+
+.why-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-content li {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 26px;
+  text-align: left;
+}
+
+.why-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--coral);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
