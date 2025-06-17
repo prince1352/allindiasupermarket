@@ -1374,24 +1374,6 @@ allindia-contact-us-social-link p {
   color: #333;
 }
 
-/* Section Header */
-.combined-header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 80px auto;
-}
-
-.combined-header h2 {
-  font-size: 2.4rem;
-  color: var(--green);
-  margin-bottom: 20px;
-}
-
-.combined-header p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
 /* Offering Rows */
 .combined-offering {
   display: flex;
