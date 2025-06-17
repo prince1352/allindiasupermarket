@@ -315,11 +315,12 @@ html, body {
 
 
 featured-products-subtitle {
-  font-size: 1.15rem;
+   font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
   color: #444;
   max-width: 700px;
   margin: 0 auto 60px;
-  line-height: 1.6;
 }
 
 /* Progress Bar */
@@ -1359,8 +1360,9 @@ allindia-contact-us-social-link p {
 
 .wholesale-hero.plain .subtitle {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #444;
 }
 
 .combined-wholesale-section {
