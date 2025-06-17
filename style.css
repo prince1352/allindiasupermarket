@@ -1341,178 +1341,158 @@ allindia-contact-us-social-link p {
                  Wholesale Page  
 ------------------------------------------------*/
 
-.wholesale-section.redesigned {
-    background: #f3f3f0;
-    padding: 100px 6% 60px;
-    text-align: center;
-  }
+.wholesale-section, 
+.wholesale-specialties,
+.wholesale-grid,
+.partner-section {
+  padding: 80px 8%;
+  background-color: #f8f8f5;
+  color: #333;
+}
 
-  .wholesale-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+h1, h2, h3 {
+  color: var(--green);
+  margin-bottom: 20px;
+}
 
-  .wholesale-header h1 {
-    font-size: 2.4rem;
-    color: var(--green);
-    margin-bottom: 10px;
-  }
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
 
-  .wholesale-header .subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 60px;
-  }
+/* Wholesale Header */
+.wholesale-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-  .wholesale-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-  }
+.wholesale-header .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
 
-  .wholesale-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-  }
-
-  .wholesale-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .wholesale-image {
-    height: 180px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .wholesale-content {
-    padding: 24px;
-  }
-
-  .wholesale-content h3 {
-    color: var(--green);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-
-  .wholesale-content p {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .partner-section.redesigned {
-    background: var(--green);
-    padding: 100px 6%;
-    color: #fff;
-  }
-
-  .partner-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .partner-text {
-    flex: 1 1 400px;
-  }
-
-  .partner-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .partner-text p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-  .partner-button {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 12px 26px;
-    background: var(--sand);
-    color: var(--green);
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .partner-button:hover {
-    background: #fff;
-    color: var(--green);
-  }
-
-  .partner-img {
-    flex: 1 1 400px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-  }
-
+/* Specialties Section */
 .wholesale-specialties {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 80px 8%;
-  background-color: #f8f8f5;
 }
 
 .specialty-block {
   position: relative;
-  height: 360px;
-  border-radius: 12px;
-  overflow: hidden;
   background-size: cover;
   background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
 }
 
 .specialty-overlay {
-  background: rgba(0, 70, 50, 0.75); /* --green tone */
+  background: rgba(0, 70, 50, 0.8);
   color: #fff;
   padding: 30px;
   width: 100%;
-  border-radius: 0 0 12px 12px;
-  transition: background 0.3s ease;
 }
 
 .specialty-overlay h2 {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-}
-
-.specialty-overlay p {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .specialty-button {
   display: inline-block;
-  margin-top: 18px;
-  padding: 10px 24px;
+  margin-top: 16px;
+  padding: 12px 24px;
   background-color: var(--coral);
-  color: var(--sand);
+  color: #fff;
   font-weight: 500;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.3s ease;
+  border: 2px solid var(--coral);
 }
 
 .specialty-button:hover {
   background-color: transparent;
   color: var(--coral);
-  border: 2px solid var(--coral);
 }
 
+/* Wholesale Grid */
+.wholesale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
 
+.wholesale-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.wholesale-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.wholesale-content {
+  padding: 24px;
+}
+
+.wholesale-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--green);
+}
+
+/* Partner Section */
+.partner-section {
+  background-color: var(--green);
+  color: #fff;
+}
+
+.partner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.partner-text {
+  flex: 1;
+}
+
+.partner-img {
+  flex: 1;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.partner-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: var(--coral);
+  color: var(--sand);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid var(--coral);
+  transition: all 0.3s ease;
+}
+
+.partner-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+}
