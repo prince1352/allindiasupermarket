@@ -1364,132 +1364,130 @@ allindia-contact-us-social-link p {
   color: #555;
 }
 
-  .combined-wholesale-section {
-    padding: 80px 8%;
-    background-color: var(--sand);
-  }
 
-  .combined-wholesale-header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
 
-  .combined-wholesale-header h2 {
-    font-size: 2.4rem;
-    color: var(--green);
-    margin-bottom: 16px;
-  }
 
-  .combined-wholesale-header p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.7;
-    max-width: 700px;
-    margin: 0 auto;
-  }
 
-  .combined-wholesale-flex-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 60px;
-  }
+.combined-service-section {
+  padding: 100px 8%;
+  background-color: var(--sand);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
 
-  .combined-wholesale-card-box {
-    flex: 1 1 48%;
-    background-color: #f8f8f5;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-  }
+.combined-service-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .combined-wholesale-card-img {
-    height: 240px;
-    background-size: cover;
-    background-position: center;
-  }
+.combined-service-intro h2 {
+  font-size: 2.4rem;
+  color: var(--green);
+  margin-bottom: 20px;
+}
 
-  .combined-wholesale-card-text {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.combined-service-intro p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
 
-  .combined-wholesale-card-text h3 {
-    font-size: 1.6rem;
-    color: var(--green);
-    margin-bottom: 16px;
-  }
+/* SERVICE BLOCKS */
+.combined-service-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 
-  .combined-wholesale-card-text p {
-    font-size: 1.05rem;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
+.combined-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
 
-  .combined-button-green {
-    align-self: flex-start;
-    padding: 12px 28px;
-    background-color: var(--coral);
-    color: var(--sand);
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 6px;
-    text-decoration: none;
-    border: 2px solid var(--coral);
-    transition: all 0.3s ease;
-  }
+.combined-block.reverse {
+  flex-direction: row-reverse;
+}
 
-  .combined-button-green:hover {
-    background-color: transparent;
-    color: var(--coral);
-  }
+.combined-image {
+  flex: 1;
+  min-width: 300px;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
 
-  .combined-features-subgrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-  }
+.combined-text {
+  flex: 1;
+  min-width: 300px;
+}
 
-  .combined-feature-box {
-    background-color: #f8f8f5;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-  }
+.combined-text h3 {
+  font-size: 1.8rem;
+  color: var(--green);
+  margin-bottom: 16px;
+}
 
-  .combined-feature-box:hover {
-    transform: translateY(-4px);
-  }
+.combined-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 14px;
+}
 
-  .combined-feature-box-img {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-  }
+/* FEATURES GRID */
+.combined-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
 
-  .combined-feature-box-text {
-    padding: 24px;
-  }
+.combined-feature {
+  background-color: #f8f8f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 
-  .combined-feature-box-text h4 {
-    font-size: 1.3rem;
-    color: var(--green);
-    margin-bottom: 12px;
-  }
+.combined-feature:hover {
+  transform: translateY(-4px);
+}
 
-  .combined-feature-box-text p {
-    font-size: 1.02rem;
-    color: #333;
-    line-height: 1.6;
-  }
+.combined-feature-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.combined-feature-text {
+  padding: 24px;
+}
+
+.combined-feature-text h4 {
+  font-size: 1.3rem;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.combined-feature-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+
 
 /* WHY CHOOSE US SECTION */
 .why-choose-us {
