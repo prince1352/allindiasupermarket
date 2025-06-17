@@ -1337,3 +1337,67 @@ allindia-contact-us-social-link p {
   border: 2px solid var(--coral);
 }
 
+/* ----------------------------------------------
+                 Wholesale Page  
+------------------------------------------------*/
+
+.wholesale-section, .partner-section {
+  padding: 80px 8%;
+  background-color: var(--sand);
+  color: var(--green);
+  text-align: center;
+}
+
+.wholesale-title, .partner-title {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.wholesale-description, .partner-description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.wholesale-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.benefit-box {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.benefit-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--coral);
+}
+
+.partner-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: var(--coral);
+  color: var(--sand);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid var(--coral);
+  transition: all 0.3s ease;
+}
+
+.partner-button:hover {
+  background-color: transparent;
+  color: var(--coral);
+}
+
