@@ -1342,7 +1342,7 @@ allindia-contact-us-social-link p {
 ------------------------------------------------*/
 
 .wholesale-section, .partner-section {
-  padding: 80px 8%;
+  padding: 140px 8% 80px;
   background-color: var(--sand);
   color: var(--green);
   text-align: center;
