@@ -1342,53 +1342,28 @@ allindia-contact-us-social-link p {
                  Wholesale Page  
 ------------------------------------------------*/
 
-.wholesale-hero {
-  background: linear-gradient(to bottom, rgba(21, 64, 54, 0.85), rgba(21, 64, 54, 0.95)),
-              url('/allindiasupermarket/images/wholesale-hero.jpg') no-repeat center center / cover;
-  padding: 180px 6% 160px;
+.wholesale-hero.plain {
+  background-color: var(--sand);
+  padding: 140px 8% 100px;
   text-align: center;
-  color: var(--sand);
-  position: relative;
-  margin-top: 70px;
+  color: var(--green);
+  border-bottom: 1px solid #ddd;
 }
 
-.hero-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.wholesale-hero h1 {
-  font-size: 3.2rem;
+.wholesale-hero.plain h1 {
+  font-size: 3rem;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 24px;
-  line-height: 1.25;
-  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: var(--green);
 }
 
-.wholesale-hero .subtitle {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: var(--sand);
-  margin-bottom: 36px;
+.wholesale-hero.plain .subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555;
 }
 
-.hero-button {
-  padding: 14px 32px;
-  background-color: var(--coral);
-  color: var(--sand);
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  border: 2px solid var(--coral);
-  transition: all 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: transparent;
-  color: var(--coral);
-}
 
 
 .specialty-services {
