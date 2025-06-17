@@ -1364,136 +1364,132 @@ allindia-contact-us-social-link p {
   color: #555;
 }
 
-.combined-wholesale-section {
-  padding: 80px 8%;
-  background-color: var(--sand);
-}
+  .combined-wholesale-section {
+    padding: 80px 8%;
+    background-color: var(--sand);
+  }
 
-.combined-wholesale-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
+  .combined-wholesale-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-.combined-wholesale-header h2 {
-  font-size: 2.4rem;
-  color: var(--green);
-  margin-bottom: 16px;
-}
+  .combined-wholesale-header h2 {
+    font-size: 2.4rem;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
 
-.combined-wholesale-header p {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto;
-}
+  .combined-wholesale-header p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
-/* Flex layout for restaurant and tiffin cards */
-.wholesale-flex-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 60px;
-}
+  .combined-wholesale-flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
 
-/* Individual card */
-.wholesale-card-box {
-  flex: 1 1 48%;
-  background-color: #f8f8f5;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-}
+  .combined-wholesale-card-box {
+    flex: 1 1 48%;
+    background-color: #f8f8f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
 
-.wholesale-card-img {
-  height: 240px;
-  background-size: cover;
-  background-position: center;
-}
+  .combined-wholesale-card-img {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+  }
 
-.wholesale-card-text {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .combined-wholesale-card-text {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.wholesale-card-text h3 {
-  font-size: 1.6rem;
-  color: var(--green);
-  margin-bottom: 16px;
-}
+  .combined-wholesale-card-text h3 {
+    font-size: 1.6rem;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
 
-.wholesale-card-text p {
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
+  .combined-wholesale-card-text p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
 
-.wholesale-card-text .button-green {
-  align-self: flex-start;
-  padding: 12px 28px;
-  background-color: var(--coral);
-  color: var(--sand);
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 2px solid var(--coral);
-  transition: all 0.3s ease;
-}
+  .combined-button-green {
+    align-self: flex-start;
+    padding: 12px 28px;
+    background-color: var(--coral);
+    color: var(--sand);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid var(--coral);
+    transition: all 0.3s ease;
+  }
 
-.wholesale-card-text .button-green:hover {
-  background-color: transparent;
-  color: var(--coral);
-}
+  .combined-button-green:hover {
+    background-color: transparent;
+    color: var(--coral);
+  }
 
-/* Features Grid inside combined section */
-.features-subgrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
+  .combined-features-subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
 
-.feature-box {
-  background-color: #f8f8f5;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
-}
+  .combined-feature-box {
+    background-color: #f8f8f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
 
-.feature-box:hover {
-  transform: translateY(-4px);
-}
+  .combined-feature-box:hover {
+    transform: translateY(-4px);
+  }
 
-.feature-box-img {
-  height: 220px;
-  background-size: cover;
-  background-position: center;
-}
+  .combined-feature-box-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
 
-.feature-box-text {
-  padding: 24px;
-}
+  .combined-feature-box-text {
+    padding: 24px;
+  }
 
-.feature-box-text h4 {
-  font-size: 1.3rem;
-  color: var(--green);
-  margin-bottom: 12px;
-}
+  .combined-feature-box-text h4 {
+    font-size: 1.3rem;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
 
-.feature-box-text p {
-  font-size: 1.02rem;
-  color: #333;
-  line-height: 1.6;
-}
-
+  .combined-feature-box-text p {
+    font-size: 1.02rem;
+    color: #333;
+    line-height: 1.6;
+  }
 
 /* WHY CHOOSE US SECTION */
 .why-choose-us {
