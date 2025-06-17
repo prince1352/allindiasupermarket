@@ -1347,7 +1347,6 @@ allindia-contact-us-social-link p {
   padding: 140px 8% 100px;
   text-align: center;
   color: var(--green);
-  border-bottom: 1px solid #ddd;
 }
 
 .wholesale-hero.plain h1 {
@@ -1359,18 +1358,14 @@ allindia-contact-us-social-link p {
 }
 
 .wholesale-hero.plain .subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
 }
-
-
-
-
 
 .combined-wholesale-section {
   background-color: var(--sand);
-  padding: 100px 8%;
+  padding: 0px 8% 80px;
   color: #333;
 }
 
