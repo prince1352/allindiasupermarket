@@ -1799,3 +1799,8 @@ allindia-contact-us-social-link p {
   }
 }
 
+.product-display-area::after {
+  content: '';
+  display: block;
+  height: 2000px;
+}
