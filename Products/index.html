@@ -59,31 +59,30 @@
 <section class="product-page-section">
   <div class="product-layout">
 
-<!-- Left Filter Sidebar -->
-<aside class="filter-sidebar">
-  <div class="filter-inner">
-    <div class="filter-box">
-      <input type="text" id="productSearch" placeholder="Search Products..." />
+    <!-- Left Filter Sidebar -->
+    <aside class="filter-sidebar">
+      <div class="filter-inner">
+        <div class="filter-box">
+          <input type="text" id="productSearch" placeholder="Search Products..." />
 
-      <!-- Category Filter -->
-      <div class="collapsible-filter">
-        <div class="filter-header" onclick="toggleFilter(this)">
-          Categories <span class="arrow">▾</span>
+          <!-- Category Filter -->
+          <div class="collapsible-filter">
+            <div class="filter-header" onclick="toggleFilter(this)">
+              Categories <span class="arrow">▾</span>
+            </div>
+            <div id="categoryFilters" class="checkbox-list filter-content" style="display: none;"></div>
+          </div>
+
+          <!-- Brand Filter -->
+          <div class="collapsible-filter">
+            <div class="filter-header" onclick="toggleFilter(this)">
+              Brands <span class="arrow">▾</span>
+            </div>
+            <div id="brandFilters" class="checkbox-list filter-content" style="display: none;"></div>
+          </div>
         </div>
-        <div id="categoryFilters" class="checkbox-list filter-content" style="display: none;"></div>
       </div>
-
-      <!-- Brand Filter -->
-      <div class="collapsible-filter">
-        <div class="filter-header" onclick="toggleFilter(this)">
-          Brands <span class="arrow">▾</span>
-        </div>
-        <div id="brandFilters" class="checkbox-list filter-content" style="display: none;"></div>
-      </div>
-    </div>
-  </div>
-</aside>
-
+    </aside>
 
     <!-- Product Display -->
     <div class="product-display-area">
