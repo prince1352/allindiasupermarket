@@ -211,7 +211,18 @@
 
   document.getElementById("productSearch").addEventListener("input", filterProducts);
 </script>
-  
+
+  <script>
+  document.querySelectorAll('.filter-box summary').forEach(summary => {
+    summary.addEventListener('click', e => {
+      const details = summary.parentElement;
+      setTimeout(() => {
+        details.toggleAttribute('open');
+      }, 0);
+    });
+  });
+</script>
+
 </body>
 
 </html>
