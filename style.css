@@ -315,12 +315,12 @@ html, body {
 
 
 featured-products-subtitle {
-   font-size: 1.1rem;
+  max-width: 700px;
+  margin: 20px auto 10px;
+  font-size: 1.1rem;
   line-height: 1.7;
   font-weight: 300;
   color: #444;
-  max-width: 700px;
-  margin: 0 auto 60px;
 }
 
 /* Progress Bar */
@@ -701,11 +701,12 @@ featured-products-subtitle {
 }
 
 .wholesale-intro p {
-  font-size: 1.15rem;
-  color: #444;
   max-width: 700px;
-  margin: 0 auto 60px;
-  line-height: 1.6;
+  margin: 20px auto 10px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #444;
 }
 
 .wholesale-grid {
