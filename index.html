@@ -565,17 +565,19 @@ fetch(endpoint)
     <!-- Script Search -->
 
 <script>
-  function openSearchBar() {
-    document.getElementById("headerSearchContainer").classList.add("active");
-    document.getElementById("navContact").classList.add("hidden");
-    document.getElementById("headerSearchInput").focus();
-  }
+function openSearchBar() {
+  document.getElementById("headerSearchContainer").classList.add("active");
+  document.getElementById("navContact").classList.add("hidden");
+  document.getElementById("navAbout").classList.add("hidden");
+  document.getElementById("headerSearchInput").focus();
+}
 
-  function closeSearchBar() {
-    document.getElementById("headerSearchContainer").classList.remove("active");
-    document.getElementById("navContact").classList.remove("hidden");
-    document.getElementById("headerSearchInput").value = "";
-  }
+function closeSearchBar() {
+  document.getElementById("headerSearchContainer").classList.remove("active");
+  document.getElementById("navContact").classList.remove("hidden");
+  document.getElementById("navAbout").classList.remove("hidden");
+  document.getElementById("headerSearchInput").value = "";
+}
 </script>
 
   
