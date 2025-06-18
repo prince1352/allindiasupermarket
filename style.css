@@ -1648,18 +1648,21 @@ allindia-contact-us-social-link p {
   gap: 80px;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
 }
 
 /* LEFT SIDEBAR */
 .filter-sidebar {
-  flex: 0 0 280px;
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   position: sticky;
-  top: 160px;
+  top: 140px; /* adjust this depending on your header height */
+  height: fit-content;
+  align-self: flex-start;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1;
 }
 
 .filter-box input[type="text"] {
