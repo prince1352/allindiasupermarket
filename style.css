@@ -192,13 +192,13 @@ html, body {
 }
 
 #headerSearchContainer.active #searchIcon {
-  transform: translateX(-240px); /* adjust to match bar width */
+  transform: translateX(0px); /* adjust to match bar width */
 }
 
 #headerSearchContainer.active #headerSearchForm {
   width: 240px;
   opacity: 1;
-  margin-left: -240px; /* pulls the box left */
+  margin-left: 0px; /* pulls the box left */
 }
 
 .close-search {
