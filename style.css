@@ -175,10 +175,9 @@ html, body {
 
 
 #headerSearchContainer.active #headerSearchForm {
-  width: 100vw;
-  margin-right: 10vw;
+  width: calc(100vw * 0.3); /* or adjust this to taste */
+  right: 10vw; /* aligns with the right side of the nav-underline */
   opacity: 1;
-  padding: 6px 12px;
 }
 
 #headerSearchForm input {
