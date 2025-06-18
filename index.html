@@ -568,46 +568,38 @@ fetch(endpoint)
     <!-- Script Search -->
 
 <script>
-  const searchContainer = document.getElementById("headerSearchContainer");
-  const searchInput = document.getElementById("headerSearchInput");
-  const searchIcon = document.getElementById("searchIcon");
-  const navAbout = document.querySelector(".nav-about");
-  const navContact = document.querySelector(".nav-contact");
+function openSearchBar() {
+  const container = document.getElementById("headerSearchContainer");
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
 
-  function openSearchBar() {
-    searchContainer.classList.add("active");
+  container.classList.add("active");
+  about.classList.add("fade-out");
+  contact.classList.add("fade-out");
 
-    navAbout.classList.remove("fade-in");
-    navAbout.classList.add("fade-out");
+  setTimeout(() => {
+    about.classList.add("hidden");
+    contact.classList.add("hidden");
+    document.getElementById("headerSearchInput").focus();
+  }, 400);
+}
 
-    navContact.classList.remove("fade-in");
-    navContact.classList.add("fade-out");
+function closeSearchBar() {
+  const container = document.getElementById("headerSearchContainer");
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
 
-    setTimeout(() => {
-      navAbout.classList.add("hidden");
-      navContact.classList.add("hidden");
-    }, 400); // match CSS transition duration
+  container.classList.remove("active");
 
-    setTimeout(() => {
-      searchInput.focus();
-    }, 500);
-  }
+  about.classList.remove("hidden");
+  contact.classList.remove("hidden");
+  about.classList.remove("fade-out");
+  contact.classList.remove("fade-out");
+  about.classList.add("fade-in");
+  contact.classList.add("fade-in");
 
-  function closeSearchBar() {
-    searchContainer.classList.remove("active");
-
-    navAbout.classList.remove("hidden");
-    navContact.classList.remove("hidden");
-
-    navAbout.classList.remove("fade-out");
-    navContact.classList.remove("fade-out");
-
-    navAbout.classList.add("fade-in");
-    navContact.classList.add("fade-in");
-
-    // Optional: Clear input value
-    searchInput.value = "";
-  }
+  document.getElementById("headerSearchInput").value = "";
+}
 </script>
 
   
