@@ -165,7 +165,7 @@ html, body {
   transition: width 0.5s ease, opacity 0.4s ease 0.1s;
   margin-left: 16px;
   background-color: #e8dccc;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 0;
   display: flex;
@@ -175,7 +175,7 @@ html, body {
 
 
 #headerSearchContainer.active #headerSearchForm {
-  width: calc(100vw * 0.3); /* or adjust this to taste */
+  width: calc(100vw * 0.2); /* or adjust this to taste */
   right: 10vw; /* aligns with the right side of the nav-underline */
   opacity: 1;
 }
