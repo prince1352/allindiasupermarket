@@ -155,8 +155,6 @@ html, body {
   display: flex;
   align-items: center;
   transition: gap 0.5s ease;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #searchIcon {
@@ -239,6 +237,16 @@ html, body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.nav-right {
+  align-items: center;
+}
+
+.nav-about,
+.nav-contact,
+.header-search {
+  align-self: center;
 }
 
 /* -------------------------------
