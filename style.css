@@ -175,27 +175,32 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 
 #searchIcon {
   transition: transform 0.5s ease;
+  z-index: 2;
 }
 
 #headerSearchForm {
-  width: 0;
-  opacity: 0;
-  transition: width 0.5s ease, opacity 0.4s ease;
-  margin-left: 0;
-  background-color: #e8dccc;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-  padding: 6px 10px;
   display: flex;
+  flex-direction: row-reverse; /* Reverse direction: close button first */
   align-items: center;
   gap: 6px;
+  width: 0;
+  opacity: 0;
   overflow: hidden;
+  margin-right: 0;
+  background-color: #e8dccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 6px 10px;
+  border-radius: 0;
+  transition: width 0.5s ease, opacity 0.4s ease;
+  z-index: 1;
+  position: relative;
 }
+
 
 #headerSearchForm input {
   width: 100%;
@@ -207,15 +212,16 @@ html, body {
 }
 
 #headerSearchContainer.active {
-  gap: 16px; /* spacing between icon and form */
+  gap: 16px;
 }
 
 #headerSearchContainer.active #searchIcon {
-  transform: translateX(-220px); /* moves icon left smoothly */
+  transform: translateX(-220px); /* Adjust based on actual search bar width */
 }
 
 #headerSearchContainer.active #headerSearchForm {
-  width: 200px; /* or use a fixed width based on your header layout */
+  width: 220px; /* Adjust to match your layout */
+  margin-right: -220px; /* Makes it appear to open backward (to the left) */
   opacity: 1;
 }
 
