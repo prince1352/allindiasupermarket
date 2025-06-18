@@ -239,7 +239,9 @@ html, body {
 
 .nav-about.hidden,
 .nav-contact.hidden {
-  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* -------------------------------
