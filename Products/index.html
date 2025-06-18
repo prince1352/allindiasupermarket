@@ -48,166 +48,48 @@
     </div>
   </header>
 
-    <!-- Brand Logo Strip -->
-      <section class="product-brand-strip">
-        <a href="/allindiasupermarket/Products/" style="text-decoration: none;">
-          <h3>Explore All of Our Brands &#8594;</h3>
-        </a>
-        <div class="product-brand-logos">
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand1.png" alt="Brand 1"></a>
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand2.png" alt="Brand 2"></a>
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand3.png" alt="Brand 3"></a>
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand4.png" alt="Brand 4"></a>
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand5.png" alt="Brand 5"></a>
-          <a href="#"><img src="/allindiasupermarket/images/brands/brand6.png" alt="Brand 6"></a>
-        </div>
-  </section>
-
-  <!-- Featured Products Section -->
-<section class="custom-featured-section" id="products">
-  <div class="custom-featured-wrapper">
-
-    <!-- Title and Subtitle -->
-    <div class="featured-products-header">
-      <h2 class="featured-products-title">Featured Products</h2>
-      <p class="featured-products-subtitle">A curated selection of our most popular and seasonal grocery items</p>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-line-bar">
-  <div class="line-segment active"></div>
-  <div class="line-segment"></div>
-  <div class="line-segment"></div>
-</div>
-
-    <!-- Product Display Area -->
-    <div class="featured-slider">
-      <!-- Left Arrow -->
-      <div class="nav-arrow left-arrow" id="prevArrow">&#10094;</div>
-
-      <!-- Main Product Card -->
-      <div class="main-product" id="mainProduct">
-        <!-- Injected dynamically -->
-      </div>
-
-      <!-- Side Product Cards -->
-      <div class="side-products" id="sideProducts">
-        <!-- Injected dynamically -->
-      </div>
-
-      <!-- Right Arrow -->
-      <div class="nav-arrow right-arrow" id="nextArrow">&#10095;</div>
-    </div>
-
-    <div class="featured-products-button-wrapper">
-  <a href="/allindiasupermarket/Products/" class="featured-products-button">Explore Our Full Product Lineup</a>
-    </div>
-
-    <div class="featured-loader" id="featuredLoader">
-  <div class="spinner"></div>
-    </div>
-    
+<!-- Product Title -->
+<section class="product-section">
+  <div class="product-header">
+    <h1 class="product-title">All India Supermarket Products</h1>
   </div>
 </section>
 
-    <!-- REVIEWS SECTION -->
-<section class="reviews-section">
-  <h2 class="reviews-title">What Our Customers Are Saying</h2>
+<!-- Product Page Layout -->
+<section class="product-page-section">
+  <div class="product-layout">
 
-  <div class="swiper reviews-swiper">
-    
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">Excellent service. There was a huge variety of whole sale products available at a great price. My order was completed very fast and the whole process was easy to go through! Highly recommend!!!</p>
-          <p class="review-author">– Prince V.</p>
-        </div>
-      </div>
+    <!-- Left Filter Sidebar -->
+    <aside class="filter-sidebar">
+      <div class="filter-box">
+        <input type="text" id="productSearch" placeholder="Search Products..." />
 
-      <div class="swiper-slide">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">It was a great experience dealing for a bulk order with timely service and great price. Thanks!!!!</p>
-          <p class="review-author">– Taranjit K.</p>
-        </div>
-      </div>
+        <!-- Category Filter -->
+        <details open>
+          <summary>Categories</summary>
+          <div id="categoryFilters" class="checkbox-list"></div>
+        </details>
 
-      <div class="swiper-slide">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">I recently ordered from Brothers Choice and had a really great experience. Their prices are awesome, making it easy to stock up. Everyone I spoke with was super friendly and helpful. I would definitely recommend Brothers Choice if you’re looking for a good place to buy wholesale food!</p>
-          <p class="review-author">– Munvir V.</p>
-        </div>
+        <!-- Brand Filter -->
+        <details>
+          <summary>Brands</summary>
+          <div id="brandFilters" class="checkbox-list"></div>
+        </details>
       </div>
+    </aside>
 
-      <div class="swiper-slide">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">Fantastic local supplier with excellent prices and dependable delivery.</p>
-          <p class="review-author">– Navraj T.</p>
-        </div>
+    <!-- Product Display -->
+    <div class="product-display-area">
+      <div id="productLoader" class="swiper-loader">
+        <div class="spinner"></div>
       </div>
+      <div id="productGrid" class="product-grid"></div>
     </div>
-    
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+
   </div>
 </section>
 
-    <!-- Contact Form -->
-<section class="contact-section">
-  <div class="contact-container">
 
-    <!-- Left Column: Contact Info -->
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong><br>4245 23 Avenue NW<br>Edmonton, AB, Canada</p>
-      <p><strong>Phone:</strong><br><a href="tel:+17804482356" class="contact-link">(780) 448-2356</a></p>
-      <p><strong>Email:</strong><br><a href="mailto:allindiasupermarket@gmail.com">allindiasupermarket@gmail.com</a></p>
-      <p><strong>Hours:</strong><br>Monday - Sunday<br>9am - 9:30pm</p>
-    </div>
-
-    <!-- Right Column: Form -->
-<form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/prince52sv@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-
-  <div class="form-row">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="text" name="company" placeholder="Company Name" />
-  </div>
-  <div class="form-row">
-    <input type="email" name="email" placeholder="Your Email Address" required />
-    <input type="tel" name="phone" placeholder="Your Phone Number" />
-  </div>
-  <textarea name="message" placeholder="How can we help?" required></textarea>
-  <button type="submit">Submit</button>
-
-</form>
-
-<div id="thankYouMessage" style="display: none;" class="thank-you-message">
-  <p>Thank you! Your message has been sent successfully. An All India Supermarket team member will be reaching out to you shortly.</p>
-</div>
-
-  <!-- Full Width Map Underneath -->
- <!-- Map FULL WIDTH -->
-<div class="map-container">
-  <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33800.123456789!2d-113.47654321!3d53.48512345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a02123456789ab%3A0xcafe9876543210!2s4245%2023%20Ave%20NW%2C%20Edmonton%2C%20AB%20T6L%205Z8%2C%20Canada!5e0!3m2!1sen!2sca!4v1716563000000!5m2!1sen!2sca"
-  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-
-<!-- Get Directions button OUTSIDE map-container -->
-<div class="map-button-wrapper">
-  <a class="map-button" href="https://www.google.com/maps/dir//4245+23+Avenue,+Edmonton,+AB" target="_blank">
-    Get Directions
-  </a>
-</div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -234,132 +116,6 @@
   </div>
 </footer>
 
-  <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init(); // Initialize animations
-
-  const endpoint = 'https://script.google.com/macros/s/AKfycbwI0JuC9ocjsAfc_o-seY6itGFtZsyWYPWU9DRIUMk3hWz9v9mbvZJ-gH_773iK9sU/exec';
-  const maxSlides = 3; // 15 products, 5 per slide
-  let currentSlide = 0;
-  let allProducts = [];
-
-  const mainContainer = document.getElementById('mainProduct');
-  const sideContainer = document.getElementById('sideProducts');
-  const indicators = document.querySelectorAll('.line-segment');
-  const prevArrow = document.getElementById('prevArrow');
-  const nextArrow = document.getElementById('nextArrow');
-  const loader = document.getElementById('featuredLoader');
-
-  function updateDisplay() {
-    const startIndex = currentSlide * 5;
-    const main = allProducts[startIndex];
-    const side = allProducts.slice(startIndex + 1, startIndex + 5);
-
-    // Render main product
-    if (main) {
-      mainContainer.innerHTML = `
-         <div class="product-card large" data-aos="fade-right">
-          <img src="${main['Product URL']}" alt="${main['Alt Text']}">
-          <h4>${main['Product Name']}</h4>
-        </div>
-      `;
-    }
-
-    // Render side products
-    sideContainer.innerHTML = '';
-    side.forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'product-card small';
-      card.setAttribute('data-aos', 'fade-left');
-      card.innerHTML = `
-        <img src="${p['Product URL']}" alt="${p['Alt Text']}">
-        <h5>${p['Product Name']}</h5>
-      `;
-      sideContainer.appendChild(card);
-    });
-
-    // Update progress bar
-   indicators.forEach((el, idx) => {
-  el.classList.toggle('active', idx === currentSlide);
-});
-
-    AOS.refresh(); // Refresh animations after DOM update
-  }
-
- function nextSlide() {
-  currentSlide = (currentSlide + 1) % maxSlides;
-  updateDisplay();
-}
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + maxSlides) % maxSlides;
-  updateDisplay();
-}
-
-  prevArrow.addEventListener('click', prevSlide);
-  nextArrow.addEventListener('click', nextSlide);
-
-fetch(endpoint)
-  .then(res => res.json())
-  .then(data => {
-    allProducts = data.slice(0, maxSlides * 5); // Get first 15 products
-    updateDisplay();
-    loader.style.display = 'none'; // Hide loader once products are ready
-  })
-  .catch(err => {
-    console.error('Error loading products:', err);
-    mainContainer.innerHTML = '<p style="color: red;">Failed to load products.</p>';
-    loader.style.display = 'none'; // Hide loader on error
-  });
-
-</script>
-
-
-  <!--  Script Reviews Section -->
-  
-<script>
-  const swiper = new Swiper('.reviews-swiper', {
-  effect: 'flip',
-  speed: 1000,
-  flipEffect: {
-    slideShadows: true, // enable built-in shadow during flip
-    limitRotation: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  loop: true,
-});
-</script>
-  
-<!-- Script Contact Form -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const thankYouMessage = document.getElementById("thankYouMessage");
-
-    fetch(form.action, {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: new FormData(form)
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        thankYouMessage.style.display = "block"; // Shows thank-you message
-      } else {
-        alert("There was an error submitting the form. Please try again.");
-      }
-    }).catch(error => {
-      alert("There was a problem submitting your form.");
-    });
-  });
-</script>
 
   <!-- Script Header -->
 
@@ -375,6 +131,86 @@ fetch(endpoint)
   });
 </script>
 
+ <!-- Product Script -->
+<script>
+  const productsURL = "https://script.google.com/macros/s/AKfycbzzq7OlZnxa_tDdGv-smzrVL8rZgmlfZx075fN9-iNIoCWkHZTMRXemwJu3hKw1IlyLDA/exec";
+  let allProducts = [];
+
+  fetch(productsURL)
+    .then(res => res.json())
+    .then(data => {
+      allProducts = [...data].sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
+      renderCategories(allProducts);
+      renderBrands(allProducts);
+      renderProducts(allProducts);
+      document.getElementById('productLoader').style.display = 'none';
+    });
+
+  function renderCategories(data) {
+    const categories = [...new Set(data.map(item => item["Product Category"]).filter(Boolean))].sort();
+    const container = document.getElementById("categoryFilters");
+    categories.forEach(cat => {
+      const id = `cat-${cat.replace(/\s+/g, '-')}`;
+      const label = document.createElement("label");
+      label.className = "checkbox-item";
+      label.innerHTML = `
+        <input type="checkbox" value="${cat}" onchange="filterProducts()" id="${id}" />
+        <span>${cat}</span>
+      `;
+      container.appendChild(label);
+    });
+  }
+
+  function renderBrands(data) {
+    const brands = [...new Set(data.map(item => item["Product Brand"]).filter(Boolean))].sort();
+    const container = document.getElementById("brandFilters");
+    brands.forEach(brand => {
+      const id = `brand-${brand.replace(/\s+/g, '-')}`;
+      const label = document.createElement("label");
+      label.className = "checkbox-item";
+      label.innerHTML = `
+        <input type="checkbox" value="${brand}" onchange="filterProducts()" id="${id}" />
+        <span>${brand}</span>
+      `;
+      container.appendChild(label);
+    });
+  }
+
+  function renderProducts(products) {
+    const grid = document.getElementById("productGrid");
+    grid.innerHTML = "";
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.innerHTML = `
+        <img src="${product["Product URL"]}" alt="${product["Alt Text"]}" loading="lazy">
+        <div class="product-info">
+          <h3>${product["Product Name"]}</h3>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function filterProducts() {
+    const searchValue = document.getElementById("productSearch").value.toLowerCase();
+
+    const checkedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
+    const checkedBrands = Array.from(document.querySelectorAll('#brandFilters input:checked')).map(cb => cb.value);
+
+    const filtered = allProducts.filter(p => {
+      const matchesSearch = p["Product Name"].toLowerCase().includes(searchValue);
+      const matchesCategory = checkedCategories.length === 0 || checkedCategories.includes(p["Product Category"]);
+      const matchesBrand = checkedBrands.length === 0 || checkedBrands.includes(p["Product Brand"]);
+      return matchesSearch && matchesCategory && matchesBrand;
+    });
+
+    const sorted = filtered.sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
+    renderProducts(sorted);
+  }
+
+  document.getElementById("productSearch").addEventListener("input", filterProducts);
+</script>
   
 </body>
 
