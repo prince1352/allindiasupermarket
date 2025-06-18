@@ -154,13 +154,12 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 240px;
+  transition: gap 0.5s ease;
 }
 
 #searchIcon {
   transition: transform 0.5s ease;
   z-index: 2;
-  position: relative;
 }
 
 #headerSearchForm {
@@ -169,16 +168,14 @@ html, body {
   flex-direction: row-reverse; /* ✕ on the right, input on left */
   gap: 6px;
   opacity: 0;
+  width: 0;
   overflow: hidden;
   padding: 6px 12px;
   margin-left: 0;
   background-color: var(--sand);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
   border-radius: 0;
-  right: 0;
-  width: 0;
-  opacity: 0;
-  transition: width 0.6s ease, opacity 0.5s ease;
 }
 
 #headerSearchForm input {
@@ -201,6 +198,7 @@ html, body {
 #headerSearchContainer.active #headerSearchForm {
   width: 240px;
   opacity: 1;
+  margin-left: -240px; /* pulls the box left */
 }
 
 .close-search {
