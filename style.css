@@ -1557,11 +1557,6 @@ allindia-contact-us-social-link p {
   color: var(--coral);
 }
 
-
-
-
-
-
 .partner-highlight {
   padding: 80px 8%;
   background-color: var(--sand);
@@ -1684,7 +1679,28 @@ allindia-contact-us-social-link p {
   cursor: pointer;
   padding: 8px 0;
   color: var(--green);
+  list-style: none;
+  position: relative;
 }
+
+.filter-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-box summary::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
 
 /* CHECKBOXES */
 .checkbox-list {
