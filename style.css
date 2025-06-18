@@ -175,7 +175,7 @@ html, body {
 
 
 #headerSearchContainer.active #headerSearchForm {
-  width: 40vw; /* fills space inside 20% padding */
+  width: calc(100vw * 0.4);
   opacity: 1;
   padding: 6px 12px;
 }
