@@ -153,7 +153,16 @@ html, body {
 
 .nav-about,
 .nav-contact {
+  opacity: 1;
+  transform: translateX(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-about.fade-in,
+.nav-contact.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .nav-about.fade-out,
