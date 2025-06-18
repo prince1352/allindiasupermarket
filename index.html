@@ -410,7 +410,7 @@
     // Render main product
     if (main) {
       mainContainer.innerHTML = `
-         <div class="product-card large" data-aos="fade-right">
+         <div class="featured-product-card large" data-aos="fade-right">
           <img src="${main['Product URL']}" alt="${main['Alt Text']}">
           <h4>${main['Product Name']}</h4>
         </div>
@@ -421,7 +421,7 @@
     sideContainer.innerHTML = '';
     side.forEach(p => {
       const card = document.createElement('div');
-      card.className = 'product-card small';
+      card.className = 'featured-product-card small';
       card.setAttribute('data-aos', 'fade-left');
       card.innerHTML = `
         <img src="${p['Product URL']}" alt="${p['Alt Text']}">
