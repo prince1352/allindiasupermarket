@@ -1630,12 +1630,6 @@ allindia-contact-us-social-link p {
   text-align: center;
 }
 
-.product-divider {
-  width: 90%;
-  margin: 20px auto 0;
-  border-bottom: 0.7px solid var(--green);
-}
-
 .product-title {
   font-size: 3rem;
   font-weight: 700;
