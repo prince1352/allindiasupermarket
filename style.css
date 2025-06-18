@@ -168,7 +168,7 @@ html, body {
 #headerSearchForm {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse; /* ✕ on the right, input on left */
+  flex-direction: row; /* ✕ on the right, input on left */
   gap: 6px;
   opacity: 0;
   width: 0;
