@@ -216,15 +216,6 @@
   }
 
   document.getElementById("productSearch").addEventListener("input", filterProducts);
-
-  window.addEventListener("scroll", () => {
-  const sidebar = document.querySelector(".filter-sidebar");
-  if (window.scrollY > 140) {
-    sidebar.classList.add("is-sticky");
-  } else {
-    sidebar.classList.remove("is-sticky");
-  }
-});
   
 </script>
 
