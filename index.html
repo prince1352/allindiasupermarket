@@ -578,11 +578,10 @@ function openSearchBar() {
   contact.classList.add("fade-out");
 
   setTimeout(() => {
-    container.classList.add("padded"); // apply padding after animation
     about.classList.add("hidden");
     contact.classList.add("hidden");
     document.getElementById("headerSearchInput").focus();
-  }, 500); // matches animation duration
+  }, 400);
 }
 
 function closeSearchBar() {
@@ -591,7 +590,6 @@ function closeSearchBar() {
   const contact = document.querySelector(".nav-contact");
 
   container.classList.remove("active");
-  container.classList.remove("padded"); // remove padding before animation
 
   about.classList.remove("hidden");
   contact.classList.remove("hidden");
