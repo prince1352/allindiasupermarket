@@ -198,6 +198,7 @@ html, body {
 #headerSearchContainer.active #headerSearchForm {
   width: 240px;
   opacity: 1;
+  margin-left: -240px;
 }
 
 .close-search {
