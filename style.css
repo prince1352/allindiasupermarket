@@ -1648,7 +1648,7 @@ allindia-contact-us-social-link p {
   gap: 80px;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .filter-inner {
