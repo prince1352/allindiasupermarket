@@ -35,14 +35,22 @@
         </div>
 
         <ul class="nav-right">
-          <li><a href="/allindiasupermarket/About/">About</a></li>
-          <li><a href="/allindiasupermarket/Contact/">Contact</a></li>
-          <li>
-            <a href="#search" aria-label="Search">
-              <i class="fas fa-search"></i>
-            </a>
-          </li>
-        </ul>
+          <li class="nav-about" id="navAbout">
+    <a href="/allindiasupermarket/About/">About</a>
+  </li>
+
+  <li class="nav-contact" id="navContact">
+    <a href="/allindiasupermarket/Contact/">Contact</a>
+  </li>
+
+  <li class="header-search" id="headerSearchContainer">
+    <i class="fas fa-search" id="searchIcon" onclick="openSearchBar()"></i>
+    <form id="headerSearchForm" action="/allindiasupermarket/Products/" method="GET">
+      <input type="text" name="search" id="headerSearchInput" placeholder="Search products..." />
+      <button type="button" class="close-search" onclick="closeSearchBar()">✕</button>
+    </form>
+  </li>
+</ul>
       </nav>
       <div class="nav-underline"></div>
     </div>
