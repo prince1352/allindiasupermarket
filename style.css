@@ -189,6 +189,10 @@ html, body {
   display: none !important;
 }
 
+.nav-about.hidden {
+  display: none !important;
+}
+
 /* -------------------------------
         Landing Section Styles
 -------------------------------- */
