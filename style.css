@@ -151,6 +151,18 @@ html, body {
   display: none !important;
 }
 
+.nav-about,
+.nav-contact {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-about.fade-out,
+.nav-contact.fade-out {
+  opacity: 0;
+  transform: translateX(40px); /* slide out smoothly */
+  pointer-events: none;
+}
+
 .header-search {
   position: relative;
   display: flex;
@@ -187,6 +199,14 @@ html, body {
   outline: none;
   font-size: 1rem;
   color: var(--green);
+}
+
+#searchIcon {
+  transition: transform 0.5s ease;
+}
+
+#headerSearchContainer.active #searchIcon {
+  transform: translateX(-220px); /* Adjust based on search bar width */
 }
 
 .close-search {
