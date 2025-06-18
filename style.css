@@ -1799,8 +1799,7 @@ allindia-contact-us-social-link p {
   }
 }
 
-.product-display-area::after {
-  content: '';
-  display: block;
-  height: 2000px;
+.product-page-section, body, html {
+  overflow: visible !important;
+  height: auto !important;
 }
