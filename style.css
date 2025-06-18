@@ -1644,11 +1644,10 @@ allindia-contact-us-social-link p {
 }
 
 .product-layout {
-  display: flex;
-  gap: 80px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  display: grid; /* instead of flex */
+  grid-template-columns: 300px 1fr;
+  align-items: start;
+  gap: 60px;
 }
 
 .filter-inner {
@@ -1664,8 +1663,14 @@ allindia-contact-us-social-link p {
 
 /* LEFT SIDEBAR */
 .filter-sidebar {
-  width: 260px;
-  flex-shrink: 0;
+  position: sticky;
+  top: 140px;
+  height: fit-content;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1;
 }
 
 .filter-box input[type="text"] {
