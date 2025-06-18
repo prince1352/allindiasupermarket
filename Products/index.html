@@ -65,20 +65,19 @@
   <input type="text" id="productSearch" placeholder="Search Products..." />
 
   <!-- Category Filter -->
-  <div class="collapsible-filter">
-    <div class="filter-header" onclick="toggleFilter(this)">
-      Categories <span class="arrow">▾</span>
-    </div>
-    <div id="categoryFilters" class="checkbox-list filter-content"></div>
+ <div class="collapsible-filter">
+  <div class="filter-header" onclick="toggleFilter(this)">
+    Categories <span class="arrow">▾</span>
   </div>
+  <div id="categoryFilters" class="checkbox-list filter-content" style="display: none;"></div>
+</div>
 
-  <!-- Brand Filter -->
-  <div class="collapsible-filter">
-    <div class="filter-header" onclick="toggleFilter(this)">
-      Brands <span class="arrow">▾</span>
-    </div>
-    <div id="brandFilters" class="checkbox-list filter-content" style="display: none;"></div>
+<!-- Brand Filter -->
+<div class="collapsible-filter">
+  <div class="filter-header" onclick="toggleFilter(this)">
+    Brands <span class="arrow">▾</span>
   </div>
+  <div id="brandFilters" class="checkbox-list filter-content" style="display: none;"></div>
 </div>
     </aside>
 
@@ -216,14 +215,14 @@
   document.getElementById("productSearch").addEventListener("input", filterProducts);
 </script>
 
-  <script>
+ <script>
   function toggleFilter(header) {
     const content = header.nextElementSibling;
-    const arrow = header.querySelector(".arrow");
-    const isVisible = content.style.display === "block";
+    const arrow = header.querySelector('.arrow');
 
-    content.style.display = isVisible ? "none" : "block";
-    arrow.textContent = isVisible ? "▾" : "▴";
+    const isVisible = content.style.display === 'block';
+    content.style.display = isVisible ? 'none' : 'block';
+    arrow.textContent = isVisible ? '▾' : '▴';
   }
 </script>
 
