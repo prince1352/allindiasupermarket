@@ -1654,16 +1654,16 @@ allindia-contact-us-social-link p {
 .filter-inner {
   position: sticky;
   top: 140px;
-  height: fit-content;
-}
-
-/* LEFT SIDEBAR */
-.filter-sidebar {
   background-color: #fff;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   z-index: 1;
+  height: fit-content;
+}
+
+/* LEFT SIDEBAR */
+.filter-sidebar {
   width: 260px;
   flex-shrink: 0;
 }
