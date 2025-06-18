@@ -1780,7 +1780,6 @@ allindia-contact-us-social-link p {
 .filter-box,
 .filter-box details,
 .checkbox-list {
-  position: relative;
   z-index: 10;
   pointer-events: auto;
 }
@@ -1808,13 +1807,3 @@ allindia-contact-us-social-link p {
   }
 }
 
-.product-page-section, body, html {
-  overflow: visible !important;
-  height: auto !important;
-}
-
-.product-display-area::after {
-  content: '';
-  display: block;
-  height: 2000px;
-}
