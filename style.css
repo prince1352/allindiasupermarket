@@ -1761,6 +1761,16 @@ details[open] summary::after {
   font-weight: 500;
 }
 
+.filter-sidebar,
+.filter-box,
+.filter-box details,
+.filter-box summary,
+.checkbox-list {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
 /* LOADER */
 .swiper-loader {
   display: flex;
