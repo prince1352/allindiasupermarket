@@ -1644,32 +1644,32 @@ allindia-contact-us-social-link p {
 }
 
 .product-layout {
-  display: grid; /* instead of flex */
+  display: grid;
   grid-template-columns: 300px 1fr;
   align-items: start;
   gap: 60px;
 }
 
 .filter-inner {
-  position: static; /* Remove sticky from this */
-  background-color: transparent;
+  position: static; /* no need for sticky here */
   padding: 0;
+  background: transparent;
   box-shadow: none;
 }
 
+
 /* LEFT SIDEBAR */
 .filter-sidebar {
-  height: 100vh; /* Full viewport height */
-  overflow-y: auto; /* Scroll if content is taller */
   position: sticky;
-  top: 0; /* Stick to top of screen */
+  top: 100px; /* Sticks after scrolling 100px */
+  align-self: start; /* Important in grid layout */
+  height: fit-content;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 24px;
+  z-index: 1;
 }
-
 
 .filter-box input[type="text"] {
   width: 100%;
