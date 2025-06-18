@@ -146,9 +146,8 @@ html, body {
   opacity: 0.2;
 }
 
-.nav-about.hidden,
-.nav-contact.hidden {
-  display: none !important;
+#searchIcon:hover {
+  transform: scale(1.1);
 }
 
 .nav-about,
@@ -168,7 +167,7 @@ html, body {
 .nav-about.fade-out,
 .nav-contact.fade-out {
   opacity: 0;
-  transform: translateX(40px); /* slide out smoothly */
+  transform: translateX(40px);
   pointer-events: none;
 }
 
@@ -186,7 +185,6 @@ html, body {
   transition: width 0.5s ease, opacity 0.4s ease 0.1s;
   margin-left: 16px;
   background-color: #e8dccc;
-  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 0;
   display: flex;
@@ -194,10 +192,8 @@ html, body {
   gap: 6px;
 }
 
-
 #headerSearchContainer.active #headerSearchForm {
-  width: calc(100vw * 0.2); /* or adjust this to taste */
-  right: 10vw; /* aligns with the right side of the nav-underline */
+  width: calc(100vw * 0.2);
   opacity: 1;
 }
 
@@ -215,7 +211,7 @@ html, body {
 }
 
 #headerSearchContainer.active #searchIcon {
-  transform: translateX(-220px); /* Adjust based on search bar width */
+  transform: translateX(-220px);
 }
 
 .close-search {
