@@ -1681,6 +1681,12 @@ allindia-contact-us-social-link p {
   color: var(--green);
   list-style: none;
   position: relative;
+  
+}
+
+details summary {
+  cursor: pointer;
+  user-select: none;
 }
 
 .filter-box summary::-webkit-details-marker {
