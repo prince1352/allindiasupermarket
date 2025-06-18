@@ -574,16 +574,19 @@ function openSearchBar() {
   const contact = document.querySelector(".nav-contact");
 
   container.classList.add("active");
+  about.classList.remove("fade-in");
+  contact.classList.remove("fade-in");
   about.classList.add("fade-out");
   contact.classList.add("fade-out");
 
+  // ⏱ Delay hiding *after* fade-out finishes (buffered)
   setTimeout(() => {
     about.classList.add("hidden");
     contact.classList.add("hidden");
     document.getElementById("headerSearchInput").focus();
-  }, 400);
+  }, 500); // was 400 — increase slightly to ensure fade finishes
 }
-
+  
 function closeSearchBar() {
   const container = document.getElementById("headerSearchContainer");
   const about = document.querySelector(".nav-about");
