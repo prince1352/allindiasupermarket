@@ -379,7 +379,7 @@ html, body {
   max-width: 500px;
 }
 
-.product-card.large {
+.featured-product-card.large {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -388,7 +388,7 @@ html, body {
   justify-content: space-between;
 }
 
-.product-card.large img {
+.featured-product-card.large img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 16px;
@@ -397,7 +397,7 @@ html, body {
   max-height: 410px;
 }
 
-.product-card.large h4 {
+.featured-product-card.large h4 {
   color: var(--green);
   font-size: 1.4rem;
   font-weight: 600;
@@ -412,7 +412,7 @@ html, body {
 }
 
 /* Optional: Force consistent card sizing */
-.product-card.small {
+.featured-product-card.small {
   background: #fff;
   border-radius: 10px;
   padding: 12px;
@@ -422,19 +422,19 @@ html, body {
   height: 100%;
 }
 
-.product-card.small img {
+.featured-product-card.small img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 10px;
 }
 
-.product-card.small h5 {
+.featured-product-card.small h5 {
   font-size: 1rem;
   color: var(--green);
 }
 
-.product-card.small,
-.product-card.large {
+.featured-product-card.small,
+.featured-product-card.large {
   position: relative;
   max-height: 500px; 
   overflow: hidden;
@@ -446,13 +446,13 @@ html, body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card.small:hover,
-.product-card.large:hover {
+.featured-product-card.small:hover,
+.featured-product-card.large:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.product-card img {
+.featured-product-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -460,11 +460,11 @@ html, body {
   display: block;
 }
 
-.product-card:hover img {
+.featured-product-card:hover img {
   transform: scale(1.07);
 }
 
-.product-card::before {
+.featured-product-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -477,12 +477,12 @@ html, body {
   z-index: 1;
 }
 
-.product-card:hover::before {
+.featured-product-card:hover::before {
   background: rgba(0, 0, 0, 0.05); /* Subtle dark focus */
 }
 
-.product-card h4,
-.product-card h5 {
+.featured-product-card h4,
+.featured-product-card h5 {
   position: relative;
   z-index: 2; /* Keep text above overlay */
 }
