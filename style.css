@@ -146,6 +146,37 @@ html, body {
   opacity: 0.2;
 }
 
+.header-search {
+  position: relative;
+}
+
+#headerSearchForm {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#headerSearchForm input {
+  width: 200px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.header-search.active #headerSearchForm {
+  display: block;
+}
+
+
 /* -------------------------------
         Landing Section Styles
 -------------------------------- */
