@@ -175,26 +175,26 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+#searchIcon {
+  transition: transform 0.5s ease;
 }
 
 #headerSearchForm {
   width: 0;
   opacity: 0;
-  overflow: hidden;
-  transition: width 0.5s ease, opacity 0.4s ease 0.1s;
-  margin-left: 16px;
+  transition: width 0.5s ease, opacity 0.4s ease;
+  margin-left: 0;
   background-color: #e8dccc;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 6px 10px;
   display: flex;
   align-items: center;
   gap: 6px;
-}
-
-#headerSearchContainer.active #headerSearchForm {
-  width: calc(100vw * 0.2);
-  opacity: 1;
+  overflow: hidden;
 }
 
 #headerSearchForm input {
@@ -206,12 +206,17 @@ html, body {
   color: var(--green);
 }
 
-#searchIcon {
-  transition: transform 0.5s ease;
+#headerSearchContainer.active {
+  gap: 16px; /* spacing between icon and form */
 }
 
 #headerSearchContainer.active #searchIcon {
-  transform: translateX(-220px);
+  transform: translateX(-220px); /* moves icon left smoothly */
+}
+
+#headerSearchContainer.active #headerSearchForm {
+  width: 200px; /* or use a fixed width based on your header layout */
+  opacity: 1;
 }
 
 .close-search {
@@ -222,6 +227,7 @@ html, body {
   color: var(--green);
   padding: 0 6px;
 }
+
 
 /* -------------------------------
         Landing Section Styles
