@@ -569,42 +569,45 @@ fetch(endpoint)
 
 <script>
 function openSearchBar() {
+  const header = document.getElementById("headerSearchContainer");
+  const icon = document.getElementById("searchIcon");
+  const form = document.getElementById("headerSearchForm");
   const about = document.querySelector(".nav-about");
   const contact = document.querySelector(".nav-contact");
-  const icon = document.getElementById("searchIcon");
-  const container = document.getElementById("headerSearchContainer");
 
-  about.classList.remove("fade-in");
-  contact.classList.remove("fade-in");
+  // Add transitions
+  header.classList.add("search-active");
+  form.classList.add("expanded");
+  icon.classList.add("shift-left");
   about.classList.add("fade-out");
   contact.classList.add("fade-out");
 
-  icon.classList.add("shifted");
-
   setTimeout(() => {
-    about.classList.add("hidden");
-    contact.classList.add("hidden");
-    container.classList.add("active");
-  }, 400);
+    about.style.display = "none";
+    contact.style.display = "none";
+  }, 500);
 }
 
 function closeSearchBar() {
+  const header = document.getElementById("headerSearchContainer");
+  const icon = document.getElementById("searchIcon");
+  const form = document.getElementById("headerSearchForm");
   const about = document.querySelector(".nav-about");
   const contact = document.querySelector(".nav-contact");
-  const icon = document.getElementById("searchIcon");
-  const container = document.getElementById("headerSearchContainer");
 
-  container.classList.remove("active");
-  icon.classList.remove("shifted");
+  about.style.display = "inline-block";
+  contact.style.display = "inline-block";
 
   setTimeout(() => {
-    about.classList.remove("hidden");
-    contact.classList.remove("hidden");
     about.classList.remove("fade-out");
     contact.classList.remove("fade-out");
     about.classList.add("fade-in");
     contact.classList.add("fade-in");
-  }, 200);
+  }, 50);
+
+  header.classList.remove("search-active");
+  form.classList.remove("expanded");
+  icon.classList.remove("shift-left");
 }
 </script>
 
