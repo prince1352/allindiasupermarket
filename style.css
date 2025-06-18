@@ -1808,3 +1808,7 @@ allindia-contact-us-social-link p {
   }
 }
 
+.filter-sidebar {
+  border: 2px dashed red;
+}
+
