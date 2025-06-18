@@ -1662,12 +1662,12 @@ allindia-contact-us-social-link p {
 .filter-sidebar {
   position: sticky;
   top: 140px;
-  background-color: #fff;
+  height: fit-content;
+  background: #fff;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  z-index: 2;
-  height: fit-content;
+  z-index: 10;
   align-self: start;
 }
 
@@ -1808,7 +1808,8 @@ allindia-contact-us-social-link p {
   }
 }
 
-.filter-sidebar {
-  border: 2px dashed red;
+.product-page-section, body, html {
+  overflow: visible !important;
+  height: auto !important;
 }
 
