@@ -1813,3 +1813,8 @@ allindia-contact-us-social-link p {
   height: auto !important;
 }
 
+.product-display-area::after {
+  content: '';
+  display: block;
+  height: 2000px;
+}
