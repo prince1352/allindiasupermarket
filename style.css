@@ -1782,6 +1782,7 @@ allindia-contact-us-social-link p {
 .checkbox-list {
   z-index: 10;
   pointer-events: auto;
+  position: sticky;
 }
 
 /* LOADER */
