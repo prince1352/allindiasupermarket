@@ -568,47 +568,46 @@ fetch(endpoint)
     <!-- Script Search -->
 
 <script>
-function openSearchBar() {
-  const header = document.getElementById("headerSearchContainer");
-  const icon = document.getElementById("searchIcon");
-  const form = document.getElementById("headerSearchForm");
-  const about = document.querySelector(".nav-about");
-  const contact = document.querySelector(".nav-contact");
+  const searchContainer = document.getElementById("headerSearchContainer");
+  const searchInput = document.getElementById("headerSearchInput");
+  const searchIcon = document.getElementById("searchIcon");
+  const navAbout = document.querySelector(".nav-about");
+  const navContact = document.querySelector(".nav-contact");
 
-  // Add transitions
-  header.classList.add("search-active");
-  form.classList.add("expanded");
-  icon.classList.add("shift-left");
-  about.classList.add("fade-out");
-  contact.classList.add("fade-out");
+  function openSearchBar() {
+    searchContainer.classList.add("active");
 
-  setTimeout(() => {
-    about.style.display = "none";
-    contact.style.display = "none";
-  }, 500);
-}
+    navAbout.classList.remove("fade-in");
+    navAbout.classList.add("fade-out");
 
-function closeSearchBar() {
-  const header = document.getElementById("headerSearchContainer");
-  const icon = document.getElementById("searchIcon");
-  const form = document.getElementById("headerSearchForm");
-  const about = document.querySelector(".nav-about");
-  const contact = document.querySelector(".nav-contact");
+    navContact.classList.remove("fade-in");
+    navContact.classList.add("fade-out");
 
-  about.style.display = "inline-block";
-  contact.style.display = "inline-block";
+    setTimeout(() => {
+      navAbout.classList.add("hidden");
+      navContact.classList.add("hidden");
+    }, 400); // match CSS transition duration
 
-  setTimeout(() => {
-    about.classList.remove("fade-out");
-    contact.classList.remove("fade-out");
-    about.classList.add("fade-in");
-    contact.classList.add("fade-in");
-  }, 50);
+    setTimeout(() => {
+      searchInput.focus();
+    }, 500);
+  }
 
-  header.classList.remove("search-active");
-  form.classList.remove("expanded");
-  icon.classList.remove("shift-left");
-}
+  function closeSearchBar() {
+    searchContainer.classList.remove("active");
+
+    navAbout.classList.remove("hidden");
+    navContact.classList.remove("hidden");
+
+    navAbout.classList.remove("fade-out");
+    navContact.classList.remove("fade-out");
+
+    navAbout.classList.add("fade-in");
+    navContact.classList.add("fade-in");
+
+    // Optional: Clear input value
+    searchInput.value = "";
+  }
 </script>
 
   
