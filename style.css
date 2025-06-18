@@ -189,6 +189,8 @@ html, body {
 
 #headerSearchContainer.active {
   gap: 12px;
+  padding-left: 240px;
+  overflow: visible;
 }
 
 #headerSearchContainer.active #searchIcon {
