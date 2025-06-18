@@ -34,26 +34,23 @@
           </picture>
         </div>
 
-        <ul class="nav-right">
-          <li><a href="/allindiasupermarket/About/">About</a></li>
-          
-          
-          
-          
-<li class="nav-contact" id="navContact">
-  <a href="/allindiasupermarket/Contact/">Contact</a>
-</li>
+    <ul class="nav-right">
+  <li><a href="/allindiasupermarket/About/">About</a></li>
 
-<li class="header-search" id="headerSearchContainer">
-  <i class="fas fa-search" id="searchIcon" onclick="openSearchBar()"></i>
-  <form id="headerSearchForm" action="/allindiasupermarket/Products/" method="GET">
-    <input type="text" name="search" id="headerSearchInput" placeholder="Search products..." />
-    <button type="button" class="close-search" onclick="closeSearchBar()">✕</button>
-  </form>
-</li>
+  <li class="nav-contact" id="navContact">
+    <a href="/allindiasupermarket/Contact/">Contact</a>
+  </li>
 
-          
-        </ul>
+  <li class="header-search" id="headerSearchContainer">
+    <i class="fas fa-search" id="searchIcon" onclick="openSearchBar()"></i>
+    <form id="headerSearchForm" action="/allindiasupermarket/Products/" method="GET">
+      <input type="text" name="search" id="headerSearchInput" placeholder="Search products..." />
+      <button type="button" class="close-search" onclick="closeSearchBar()">✕</button>
+    </form>
+  </li>
+</ul>
+
+        
       </nav>
       <div class="nav-underline"></div>
     </div>
@@ -567,7 +564,7 @@ fetch(endpoint)
 
     <!-- Script Search -->
 
-  <script>
+<script>
   function openSearchBar() {
     document.getElementById("headerSearchContainer").classList.add("active");
     document.getElementById("navContact").classList.add("hidden");
