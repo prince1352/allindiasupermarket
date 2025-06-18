@@ -37,11 +37,19 @@
         <ul class="nav-right">
           <li><a href="/allindiasupermarket/About/">About</a></li>
           <li><a href="/allindiasupermarket/Contact/">Contact</a></li>
-          <li>
-            <a href="#search" aria-label="Search">
-              <i class="fas fa-search"></i>
-            </a>
-          </li>
+
+
+
+          
+         <li class="header-search">
+           <i class="fas fa-search" onclick="toggleSearchBar()"></i>
+           <form id="headerSearchForm" action="/allindiasupermarket/Products/" method="GET">
+             <input type="text" name="search" id="headerSearchInput" placeholder="Search products..." />
+           </form>
+         </li>
+
+
+          
         </ul>
       </nav>
       <div class="nav-underline"></div>
@@ -554,6 +562,14 @@ fetch(endpoint)
   });
 </script>
 
+    <!-- Script Search -->
+
+  <script>
+  function toggleSearchBar() {
+    document.querySelector(".header-search").classList.toggle("active");
+    document.getElementById("headerSearchInput").focus();
+  }
+</script>
   
 </body>
 
