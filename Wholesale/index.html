@@ -328,6 +328,46 @@
   });
 </script>
 
+      <!-- Script Search -->
+
+<script>
+function openSearchBar() {
+  const container = document.getElementById("headerSearchContainer");
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
+
+  container.classList.add("active");
+  about.classList.remove("fade-in");
+  contact.classList.remove("fade-in");
+  about.classList.add("fade-out");
+  contact.classList.add("fade-out");
+
+  // ⏱ Delay hiding *after* fade-out finishes (buffered)
+  setTimeout(() => {
+    about.classList.add("hidden");
+    contact.classList.add("hidden");
+    document.getElementById("headerSearchInput").focus();
+  }, 500); // was 400 — increase slightly to ensure fade finishes
+}
+  
+function closeSearchBar() {
+  const container = document.getElementById("headerSearchContainer");
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
+
+  container.classList.remove("active");
+
+  about.classList.remove("hidden");
+  contact.classList.remove("hidden");
+  about.classList.remove("fade-out");
+  contact.classList.remove("fade-out");
+  about.classList.add("fade-in");
+  contact.classList.add("fade-in");
+
+  document.getElementById("headerSearchInput").value = "";
+}
+</script>
+
   
 </body>
 
