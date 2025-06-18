@@ -140,83 +140,100 @@
 
  <!-- Product Script -->
 <script>
-  const productsURL = "https://script.google.com/macros/s/AKfycbzzq7OlZnxa_tDdGv-smzrVL8rZgmlfZx075fN9-iNIoCWkHZTMRXemwJu3hKw1IlyLDA/exec";
-  let allProducts = [];
+const productsURL = "https://script.google.com/macros/s/AKfycbzzq7OlZnxa_tDdGv-smzrVL8rZgmlfZx075fN9-iNIoCWkHZTMRXemwJu3hKw1IlyLDA/exec";
+let allProducts = [];
 
-  fetch(productsURL)
-    .then(res => res.json())
-    .then(data => {
-      allProducts = [...data].sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
-      renderCategories(allProducts);
-      renderBrands(allProducts);
-      renderProducts(allProducts);
-      document.getElementById('productLoader').style.display = 'none';
-    });
+// ✅ Get query param helper
+function getQueryParam(param) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(param);
+}
 
-  function renderCategories(data) {
-    const categories = [...new Set(data.map(item => item["Product Category"]).filter(Boolean))].sort();
-    const container = document.getElementById("categoryFilters");
-    categories.forEach(cat => {
-      const id = `cat-${cat.replace(/\s+/g, '-')}`;
-      const label = document.createElement("label");
-      label.className = "checkbox-item";
-      label.innerHTML = `
-        <input type="checkbox" value="${cat}" onchange="filterProducts()" id="${id}" />
-        <span>${cat}</span>
-      `;
-      container.appendChild(label);
-    });
-  }
+fetch(productsURL)
+  .then(res => res.json())
+  .then(data => {
+    allProducts = [...data].sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
+    renderCategories(allProducts);
+    renderBrands(allProducts);
+    renderProducts(allProducts);
+    document.getElementById('productLoader').style.display = 'none';
 
-  function renderBrands(data) {
-    const brands = [...new Set(data.map(item => item["Product Brand"]).filter(Boolean))].sort();
-    const container = document.getElementById("brandFilters");
-    brands.forEach(brand => {
-      const id = `brand-${brand.replace(/\s+/g, '-')}`;
-      const label = document.createElement("label");
-      label.className = "checkbox-item";
-      label.innerHTML = `
-        <input type="checkbox" value="${brand}" onchange="filterProducts()" id="${id}" />
-        <span>${brand}</span>
-      `;
-      container.appendChild(label);
-    });
-  }
+    // ✅ Apply brand filter from URL
+    const selectedBrandFromURL = getQueryParam('brand');
+    if (selectedBrandFromURL) {
+      const brandId = `brand-${selectedBrandFromURL.replace(/\s+/g, '-')}`;
+      const brandCheckbox = document.getElementById(brandId);
+      if (brandCheckbox) {
+        brandCheckbox.checked = true;
+        filterProducts();
+      }
+    }
+  });
 
-  function renderProducts(products) {
-    const grid = document.getElementById("productGrid");
-    grid.innerHTML = "";
-    products.forEach(product => {
-      const card = document.createElement("div");
-      card.className = "product-card";
-      card.innerHTML = `
-        <img src="${product["Product URL"]}" alt="${product["Alt Text"]}" loading="lazy">
-        <div class="product-info">
-          <h3>${product["Product Name"]}</h3>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-  }
+function renderCategories(data) {
+  const categories = [...new Set(data.map(item => item["Product Category"]).filter(Boolean))].sort();
+  const container = document.getElementById("categoryFilters");
+  categories.forEach(cat => {
+    const id = `cat-${cat.replace(/\s+/g, '-')}`;
+    const label = document.createElement("label");
+    label.className = "checkbox-item";
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}" onchange="filterProducts()" id="${id}" />
+      <span>${cat}</span>
+    `;
+    container.appendChild(label);
+  });
+}
 
-  function filterProducts() {
-    const searchValue = document.getElementById("productSearch").value.toLowerCase();
+function renderBrands(data) {
+  const brands = [...new Set(data.map(item => item["Product Brand"]).filter(Boolean))].sort();
+  const container = document.getElementById("brandFilters");
+  brands.forEach(brand => {
+    const id = `brand-${brand.replace(/\s+/g, '-')}`;
+    const label = document.createElement("label");
+    label.className = "checkbox-item";
+    label.innerHTML = `
+      <input type="checkbox" value="${brand}" onchange="filterProducts()" id="${id}" />
+      <span>${brand}</span>
+    `;
+    container.appendChild(label);
+  });
+}
 
-    const checkedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
-    const checkedBrands = Array.from(document.querySelectorAll('#brandFilters input:checked')).map(cb => cb.value);
+function renderProducts(products) {
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML = "";
+  products.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="${product["Product URL"]}" alt="${product["Alt Text"]}" loading="lazy">
+      <div class="product-info">
+        <h3>${product["Product Name"]}</h3>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
 
-    const filtered = allProducts.filter(p => {
-      const matchesSearch = p["Product Name"].toLowerCase().includes(searchValue);
-      const matchesCategory = checkedCategories.length === 0 || checkedCategories.includes(p["Product Category"]);
-      const matchesBrand = checkedBrands.length === 0 || checkedBrands.includes(p["Product Brand"]);
-      return matchesSearch && matchesCategory && matchesBrand;
-    });
+function filterProducts() {
+  const searchValue = document.getElementById("productSearch").value.toLowerCase();
 
-    const sorted = filtered.sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
-    renderProducts(sorted);
-  }
+  const checkedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
+  const checkedBrands = Array.from(document.querySelectorAll('#brandFilters input:checked')).map(cb => cb.value);
 
-  document.getElementById("productSearch").addEventListener("input", filterProducts);
+  const filtered = allProducts.filter(p => {
+    const matchesSearch = p["Product Name"].toLowerCase().includes(searchValue);
+    const matchesCategory = checkedCategories.length === 0 || checkedCategories.includes(p["Product Category"]);
+    const matchesBrand = checkedBrands.length === 0 || checkedBrands.includes(p["Product Brand"]);
+    return matchesSearch && matchesCategory && matchesBrand;
+  });
+
+  const sorted = filtered.sort((a, b) => a["Product Name"].localeCompare(b["Product Name"]));
+  renderProducts(sorted);
+}
+
+document.getElementById("productSearch").addEventListener("input", filterProducts);
   
 </script>
 
