@@ -570,41 +570,35 @@ fetch(endpoint)
 <script>
 function openSearchBar() {
   const container = document.getElementById("headerSearchContainer");
-  container.classList.add("active");
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
 
-  document.querySelector(".nav-about").classList.add("fade-out");
-  document.querySelector(".nav-contact").classList.add("fade-out");
+  container.classList.add("active");
+  about.classList.add("fade-out");
+  contact.classList.add("fade-out");
 
   setTimeout(() => {
-    document.querySelector(".nav-about").classList.add("hidden");
-    document.querySelector(".nav-contact").classList.add("hidden");
+    about.classList.add("hidden");
+    contact.classList.add("hidden");
+    document.getElementById("headerSearchInput").focus();
   }, 400);
 }
 
 function closeSearchBar() {
   const container = document.getElementById("headerSearchContainer");
-  container.classList.remove("active");
-
   const about = document.querySelector(".nav-about");
   const contact = document.querySelector(".nav-contact");
 
+  container.classList.remove("active");
+
   about.classList.remove("hidden");
   contact.classList.remove("hidden");
+  about.classList.remove("fade-out");
+  contact.classList.remove("fade-out");
+  about.classList.add("fade-in");
+  contact.classList.add("fade-in");
 
-  // Trigger fade-in
-  setTimeout(() => {
-    about.classList.remove("fade-out");
-    contact.classList.remove("fade-out");
-
-    about.classList.add("fade-in");
-    contact.classList.add("fade-in");
-  }, 10);
-
-  // Remove fade-in classes after it's done
-  setTimeout(() => {
-    about.classList.remove("fade-in");
-    contact.classList.remove("fade-in");
-  }, 500);
+  document.getElementById("headerSearchInput").value = "";
 }
 </script>
 
