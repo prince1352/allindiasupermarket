@@ -190,7 +190,7 @@ html, body {
 #headerSearchContainer.active {
   gap: 12px;
   position: relative;
-  min-width: 240px;
+  padding-left: 240px;
 }
 
 #headerSearchContainer.active #searchIcon {
