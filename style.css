@@ -150,32 +150,11 @@ html, body {
   transform: scale(1.1);
 }
 
-.nav-about,
-.nav-contact {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.nav-about.fade-in,
-.nav-contact.fade-in {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-}
-
-.nav-about.fade-out,
-.nav-contact.fade-out {
-  opacity: 0;
-  transform: translateX(40px);
-  pointer-events: none;
-}
-
 .header-search {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  transition: gap 0.5s ease;
 }
 
 #searchIcon {
@@ -185,22 +164,19 @@ html, body {
 
 #headerSearchForm {
   display: flex;
-  flex-direction: row-reverse; /* Reverse direction: close button first */
   align-items: center;
+  flex-direction: row-reverse; /* ✕ on the right, input on left */
   gap: 6px;
-  width: 0;
   opacity: 0;
+  width: 0;
   overflow: hidden;
-  margin-right: 0;
-  background-color: #e8dccc;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 6px 10px;
+  padding: 6px 12px;
+  margin-left: 0;
+  background-color: var(--sand);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
   border-radius: 0;
-  transition: width 0.5s ease, opacity 0.4s ease;
-  z-index: 1;
-  position: relative;
 }
-
 
 #headerSearchForm input {
   width: 100%;
@@ -212,17 +188,17 @@ html, body {
 }
 
 #headerSearchContainer.active {
-  gap: 16px;
+  gap: 12px;
 }
 
 #headerSearchContainer.active #searchIcon {
-  transform: translateX(-220px); /* Adjust based on actual search bar width */
+  transform: translateX(-240px); /* adjust to match bar width */
 }
 
 #headerSearchContainer.active #headerSearchForm {
-  width: 220px; /* Adjust to match your layout */
-  margin-right: -220px; /* Makes it appear to open backward (to the left) */
+  width: 240px;
   opacity: 1;
+  margin-left: -240px; /* pulls the box left */
 }
 
 .close-search {
@@ -234,6 +210,32 @@ html, body {
   padding: 0 6px;
 }
 
+/* Nav fade animations */
+.nav-about,
+.nav-contact {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-about.fade-out,
+.nav-contact.fade-out {
+  opacity: 0;
+  transform: translateX(40px);
+  pointer-events: none;
+}
+
+.nav-about.fade-in,
+.nav-contact.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.nav-about.hidden,
+.nav-contact.hidden {
+  display: none !important;
+}
 
 /* -------------------------------
         Landing Section Styles
