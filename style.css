@@ -1776,15 +1776,6 @@ allindia-contact-us-social-link p {
   font-weight: 500;
 }
 
-.filter-sidebar,
-.filter-box,
-.filter-box details,
-.checkbox-list {
-  z-index: 10;
-  pointer-events: auto;
-  position: relative;
-}
-
 /* LOADER */
 .swiper-loader {
   display: flex;
