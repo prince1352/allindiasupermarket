@@ -191,11 +191,6 @@ html, body {
   gap: 12px;
 }
 
-#headerSearchContainer.padded {
-  padding-left: 240px;
-  transition: padding-left 0.1s ease;
-}
-
 #headerSearchContainer.active #searchIcon {
   transform: translateX(-240px); /* adjust to match bar width */
 }
