@@ -1628,6 +1628,7 @@ allindia-contact-us-social-link p {
   background-color: var(--sand);
   padding: 140px 8% 40px;
   text-align: center;
+  border-bottom: 0.7px solid var(--green);
 }
 
 .product-title {
@@ -1635,6 +1636,13 @@ allindia-contact-us-social-link p {
   font-weight: 700;
   color: var(--green);
   margin-bottom: 10px;
+}
+
+.product-section .subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #444;
 }
 
 /* PAGE LAYOUT */
