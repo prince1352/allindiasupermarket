@@ -5,6 +5,11 @@
   --transition-speed: 0.3s;
 }
 
+details summary {
+  cursor: pointer;
+  user-select: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1681,11 +1686,9 @@ allindia-contact-us-social-link p {
   color: var(--green);
   list-style: none;
   position: relative;
-  
-}
-
-details summary {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   user-select: none;
 }
 
