@@ -161,23 +161,33 @@ fetch(productsURL)
     // ✅ Apply brand filter from URL
     const selectedBrandFromURL = getQueryParam('brand');
     if (selectedBrandFromURL) {
-  const brandId = `brand-${selectedBrandFromURL.replace(/\s+/g, '-')}`;
-  const brandCheckbox = document.getElementById(brandId);
-  if (brandCheckbox) {
-    brandCheckbox.checked = true;
+      const brandId = `brand-${selectedBrandFromURL.replace(/\s+/g, '-')}`;
+      const brandCheckbox = document.getElementById(brandId);
+      if (brandCheckbox) {
+        brandCheckbox.checked = true;
 
-    // ✅ Expand the Brand filter section
-    const brandFilterSection = document.getElementById("brandFilters");
-    if (brandFilterSection) {
-      brandFilterSection.style.display = 'block';
-      const header = brandFilterSection.previousElementSibling; // the .filter-header
-      const arrow = header?.querySelector('.arrow');
-      if (arrow) arrow.textContent = '▴';
+        // ✅ Expand the Brand filter section
+        const brandFilterSection = document.getElementById("brandFilters");
+        if (brandFilterSection) {
+          brandFilterSection.style.display = 'block';
+          const header = brandFilterSection.previousElementSibling;
+          const arrow = header?.querySelector('.arrow');
+          if (arrow) arrow.textContent = '▴';
+        }
+      }
     }
 
+    // ✅ Apply search from URL
+    const searchQueryFromURL = getQueryParam('search');
+    if (searchQueryFromURL) {
+      const searchInput = document.getElementById("productSearch");
+      if (searchInput) {
+        searchInput.value = searchQueryFromURL;
+      }
+    }
+
+    // ✅ Run filtering after brand/search setup
     filterProducts();
-  }
-}
   });
 
 function renderCategories(data) {
