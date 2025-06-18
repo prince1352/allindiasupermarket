@@ -164,7 +164,7 @@ html, body {
   overflow: hidden;
   transition: width 0.5s ease, opacity 0.4s ease 0.1s;
   margin-left: 16px;
-  background: var(--sand);
+  background-color: #e8dccc;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 0;
