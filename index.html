@@ -569,37 +569,42 @@ fetch(endpoint)
 
 <script>
 function openSearchBar() {
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
+  const icon = document.getElementById("searchIcon");
   const container = document.getElementById("headerSearchContainer");
-  const about = document.getElementById("navAbout");
-  const contact = document.getElementById("navContact");
 
-  container.classList.add("active");
+  about.classList.remove("fade-in");
+  contact.classList.remove("fade-in");
   about.classList.add("fade-out");
   contact.classList.add("fade-out");
+
+  icon.classList.add("shifted");
 
   setTimeout(() => {
     about.classList.add("hidden");
     contact.classList.add("hidden");
-  }, 400); // Matches the CSS animation duration
-
-  document.getElementById("headerSearchInput").focus();
+    container.classList.add("active");
+  }, 400);
 }
 
 function closeSearchBar() {
+  const about = document.querySelector(".nav-about");
+  const contact = document.querySelector(".nav-contact");
+  const icon = document.getElementById("searchIcon");
   const container = document.getElementById("headerSearchContainer");
-  const about = document.getElementById("navAbout");
-  const contact = document.getElementById("navContact");
 
   container.classList.remove("active");
-
-  // Reveal first, then fade back in
-  about.classList.remove("hidden");
-  contact.classList.remove("hidden");
+  icon.classList.remove("shifted");
 
   setTimeout(() => {
+    about.classList.remove("hidden");
+    contact.classList.remove("hidden");
     about.classList.remove("fade-out");
     contact.classList.remove("fade-out");
-  }, 50); // Delay slightly to allow visibility before fading in
+    about.classList.add("fade-in");
+    contact.classList.add("fade-in");
+  }, 200);
 }
 </script>
 
